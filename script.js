@@ -359,4 +359,183 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', updateTimelineProgress);
     window.addEventListener('resize', updateTimelineProgress);
     setTimeout(updateTimelineProgress, 200);
+
+    // ==========================================
+    // CASE STUDY MODAL SYSTEM
+    // ==========================================
+    const caseModal = document.getElementById('case-study-modal');
+    const modalBody = document.getElementById('modal-body');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+
+    const caseStudiesData = {
+        "case-1": {
+            title: "Autonomous AI Support & Remediation Agent",
+            label: "Company Project — Details Anonymized",
+            oneLiner: "AI-powered workflow for processing application logs, parsing screenshot diagnostics, and executing triage steps.",
+            overview: "Built and deployed an autonomous AI support agent in a production incident ticketing portal. The agent processes inbound support tickets, runs diagnostic queries, parses attached error screenshots, and identifies system lockout root causes under human-in-the-loop governance.",
+            problem: "Support engineers spent excessive hours manually investigating recurring ticket lockouts, downloading application logs, parsing user screenshot attachments, and verifying database state across disparate systems.",
+            architecture: `
+                <div class="modal-arch-container">
+                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> High-Level System Architecture Workflow</div>
+                    <div class="m-arch-flow">
+                        <div class="m-node"><i class="fa-solid fa-ticket"></i><span>1. Ticket / Image</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-gears"></i><span>2. Agent Router</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node"><i class="fa-solid fa-toolbox"></i><span>3. FastMCP Tools</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node"><i class="fa-solid fa-sliders"></i><span>4. Langfuse Eval</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-user-check"></i><span>5. HITL Action</span></div>
+                    </div>
+                </div>
+            `,
+            myContribution: "Personally engineered the multi-step agent reasoning workflow using the Hermes Agent Framework; built FastMCP server tool connectors for Grafana Loki log querying and Tesseract OCR screenshot parsing; implemented PostgreSQL pgvector hybrid search and Langfuse OpenTelemetry trace evaluation.",
+            challenges: "Investigating output reliability during unstructured log parsing, preventing false positive remediation triggers, and integrating strict Human-in-the-Loop (HITL) approval gates before executing administrative state changes.",
+            outcome: "Slashed incident triage response times from hours to under 2 minutes, achieving 80% accuracy on critical lockout tickets in production.",
+            techStack: ["Python", "Hermes Agent Framework", "FastMCP", "Grafana Loki", "Tesseract OCR", "pgvector", "Langfuse", "OpenTelemetry"]
+        },
+        "case-2": {
+            title: "Enterprise Hybrid-Search RAG Engine",
+            label: "Company Project — Details Anonymized",
+            oneLiner: "Multi-tenant hybrid-search RAG system for querying unstructured medical PDFs and telemetry data.",
+            overview: "Architected multi-tenant RAG retrieval pipelines capable of querying unstructured clinical PDFs, medical journals, and parental monitoring telemetry logs across enterprise environments.",
+            problem: "Querying dense medical clinical documents and high-volume telemetry logs suffered from poor precision with standard dense semantic vector search due to domain-specific terminology and complex temporal edge cases.",
+            architecture: `
+                <div class="modal-arch-container">
+                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> High-Level System Architecture Workflow</div>
+                    <div class="m-arch-flow">
+                        <div class="m-node"><i class="fa-solid fa-file-pdf"></i><span>1. Raw Documents</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-layer-group"></i><span>2. BM25 + Vector</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node"><i class="fa-solid fa-filter"></i><span>3. RRF Reranking</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node"><i class="fa-solid fa-database"></i><span>4. pgvector / Milvus</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-comment-dots"></i><span>5. Precision Response</span></div>
+                    </div>
+                </div>
+            `,
+            myContribution: "Architected the hybrid-search retrieval strategy combining BM25 keyword matching with pgvector IVFFlat dense embeddings; implemented Reciprocal Rank Fusion (RRF) reranking algorithms, structured document chunking, and resolved complex timezone edge cases.",
+            challenges: "Balancing retrieval recall and precision across multimodal PDF tables and handling timezone discrepancies in telemetry data without degrading response latency.",
+            outcome: "Achieved a +44.5% quality uplift in retrieval accuracy and boosted document retrieval precision by 30%.",
+            techStack: ["Python", "LlamaIndex", "pgvector (RRF)", "Milvus", "FastAPI", "Docker", "GCP Cloud Run"]
+        },
+        "case-3": {
+            title: "Multimodal Data Ingestion & Token Optimizer",
+            label: "Company Project — Details Anonymized",
+            oneLiner: "High-throughput document extraction and payload token optimization pipeline for enterprise RAG engines.",
+            overview: "Designed high-throughput data processing and ingestion pipelines capable of extracting text, tables, and images from large heterogeneous document streams for vector database indexing.",
+            problem: "Processing high-volume document uploads created heavy memory spikes on backend servers and generated excessive LLM token overhead during vector index construction.",
+            architecture: `
+                <div class="modal-arch-container">
+                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> High-Level System Architecture Workflow</div>
+                    <div class="m-arch-flow">
+                        <div class="m-node"><i class="fa-solid fa-cloud-arrow-up"></i><span>1. Upload Stream</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-scissors"></i><span>2. Ingestion & Memoization</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node"><i class="fa-solid fa-coins"></i><span>3. Token Optimizer</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node"><i class="fa-solid fa-database"></i><span>4. Index Storage</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-server"></i><span>5. GCP Cloud Run</span></div>
+                    </div>
+                </div>
+            `,
+            myContribution: "Designed text, table, and image data ingestion pipelines; implemented memory-bounded chunking and context memoization to optimize LLM payload tokenization, and authored GCP Cloud Run infrastructure definitions.",
+            challenges: "Eliminating memory leaks during complex PDF table extraction and reducing redundant LLM API calls without losing semantic context.",
+            outcome: "Reduced backend memory consumption by 35% and cut LLM token usage by 50% across data processing pipelines.",
+            techStack: ["Python", "FastAPI", "LlamaIndex", "PostgreSQL", "Docker", "GCP Cloud Run"]
+        }
+    };
+
+    function openCaseStudyModal(caseId) {
+        const data = caseStudiesData[caseId];
+        if (!data || !caseModal || !modalBody) return;
+
+        const techTagsHtml = data.techStack.map(tech => `<span class="tag">${tech}</span>`).join('');
+
+        modalBody.innerHTML = `
+            <div class="modal-case-header">
+                <span class="prod-badge"><i class="fa-solid fa-building-shield"></i> ${data.label}</span>
+                <h2>${data.title}</h2>
+                <p class="modal-one-liner"><em>${data.oneLiner}</em></p>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fa-solid fa-align-left"></i> Overview</h3>
+                <p>${data.overview}</p>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fa-solid fa-triangle-exclamation"></i> Problem Statement</h3>
+                <p>${data.problem}</p>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fa-solid fa-sitemap"></i> High-Level Architecture</h3>
+                ${data.architecture}
+            </div>
+
+            <div class="modal-section highlight-box">
+                <h3><i class="fa-solid fa-user-check"></i> My Contribution</h3>
+                <p>${data.myContribution}</p>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fa-solid fa-gears"></i> Technical Challenges &amp; Decisions</h3>
+                <p>${data.challenges}</p>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fa-solid fa-chart-line"></i> Outcome &amp; Impact</h3>
+                <p>${data.outcome}</p>
+            </div>
+
+            <div class="modal-section">
+                <h3><i class="fa-solid fa-code"></i> Technologies Used</h3>
+                <div class="modal-tech-tags">${techTagsHtml}</div>
+            </div>
+        `;
+
+        caseModal.classList.add('active');
+        caseModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeCaseStudyModal() {
+        if (!caseModal) return;
+        caseModal.classList.remove('active');
+        caseModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    // Attach click listeners to View Case Study buttons
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.view-case-study-btn');
+        if (btn) {
+            const caseId = btn.getAttribute('data-case-id');
+            openCaseStudyModal(caseId);
+        }
+    });
+
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeCaseStudyModal);
+    }
+
+    if (caseModal) {
+        caseModal.addEventListener('click', (e) => {
+            if (e.target === caseModal) {
+                closeCaseStudyModal();
+            }
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && caseModal && caseModal.classList.contains('active')) {
+            closeCaseStudyModal();
+        }
+    });
 });

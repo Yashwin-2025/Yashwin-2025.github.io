@@ -180,19 +180,23 @@
             </div>
 
             <div class="prod-work-list">
-                <!-- Production Item 1 -->
+                <!-- Case Study Card 1 -->
                 <div class="prod-work-item glass">
                     <div class="prod-work-top">
                         <div class="prod-work-meta">
-                            <span class="prod-badge"><i class="fa-solid fa-shield-halved"></i> Production System</span>
-                            <span class="prod-confidential"><i class="fa-solid fa-lock"></i> ConnectSecure Portal</span>
+                            <span class="prod-badge"><i class="fa-solid fa-building-shield"></i> Company Project — Details Anonymized</span>
+                            <span class="prod-confidential"><i class="fa-solid fa-lock"></i> Ticketing &amp; Support Portal</span>
                         </div>
-                        <div class="prod-metric-pill">Autonomous Agent</div>
+                        <span class="prod-metric-pill">Triage Response &lt; 2 Mins</span>
                     </div>
+                    
                     <h3 class="prod-title">Autonomous AI Support &amp; Remediation Agent</h3>
-                    <p class="prod-desc">
-                        Built and deployed an autonomous AI support agent in a production ticketing portal. Integrated Grafana Loki MCP server for log querying, Tesseract OCR for screenshot parsing, PostgreSQL pgvector hybrid search, and Langfuse OpenTelemetry evaluation under strict human-in-the-loop (HITL) governance.
-                    </p>
+                    <p class="prod-one-liner"><em>AI-powered workflow for processing application logs, parsing screenshot diagnostics, and executing triage steps.</em></p>
+                    
+                    <div class="prod-contribution-box">
+                        <strong>My Contribution:</strong> Built and improved the multi-step agent workflow for log processing, integrated MCP tool connectors (Grafana Loki, Tesseract OCR), and investigated output reliability under Human-in-the-Loop (HITL) governance.
+                    </div>
+
                     <div class="prod-tech-tags">
                         <span class="tag">Python</span>
                         <span class="tag">Hermes Agent Framework</span>
@@ -202,51 +206,78 @@
                         <span class="tag">pgvector</span>
                         <span class="tag">Langfuse</span>
                     </div>
+
+                    <div class="prod-card-footer">
+                        <button class="btn btn-primary btn-sm view-case-study-btn" data-case-id="case-1">
+                            View Case Study <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Production Item 2 -->
+                <!-- Case Study Card 2 -->
                 <div class="prod-work-item glass">
                     <div class="prod-work-top">
                         <div class="prod-work-meta">
-                            <span class="prod-badge"><i class="fa-solid fa-brain"></i> Production System</span>
-                            <span class="prod-confidential"><i class="fa-solid fa-lock"></i> Qatar Govt &amp; Sports Medicine</span>
+                            <span class="prod-badge"><i class="fa-solid fa-building-shield"></i> Company Project — Details Anonymized</span>
+                            <span class="prod-confidential"><i class="fa-solid fa-lock"></i> Knowledge &amp; Telemetry Portal</span>
                         </div>
-                        <div class="prod-metric-pill">+44.5% Quality Uplift</div>
+                        <span class="prod-metric-pill">+44.5% Quality Uplift</span>
                     </div>
+                    
                     <h3 class="prod-title">Enterprise Hybrid-Search RAG Engine</h3>
-                    <p class="prod-desc">
-                        Architected multi-tenant RAG pipelines querying unstructured medical clinical PDFs and parental monitoring telemetry data. Designed reciprocal rank fusion (RRF) reranking over pgvector and Milvus vector databases, boosting retrieval precision by 30%.
-                    </p>
+                    <p class="prod-one-liner"><em>Multi-tenant hybrid-search RAG system for querying unstructured medical PDFs and telemetry data.</em></p>
+                    
+                    <div class="prod-contribution-box">
+                        <strong>My Contribution:</strong> Architected hybrid retrieval pipelines combining BM25 keyword search with dense vector embeddings (pgvector/Milvus), implemented Reciprocal Rank Fusion (RRF) reranking, and resolved timezone edge cases.
+                    </div>
+
                     <div class="prod-tech-tags">
                         <span class="tag">Python</span>
                         <span class="tag">LlamaIndex</span>
                         <span class="tag">pgvector (RRF)</span>
                         <span class="tag">Milvus</span>
-                        <span class="tag">GCP Cloud Run</span>
+                        <span class="tag">FastAPI</span>
                         <span class="tag">Docker</span>
+                        <span class="tag">GCP</span>
+                    </div>
+
+                    <div class="prod-card-footer">
+                        <button class="btn btn-primary btn-sm view-case-study-btn" data-case-id="case-2">
+                            View Case Study <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
 
-                <!-- Production Item 3 -->
+                <!-- Case Study Card 3 -->
                 <div class="prod-work-item glass">
                     <div class="prod-work-top">
                         <div class="prod-work-meta">
-                            <span class="prod-badge"><i class="fa-solid fa-server"></i> Production System</span>
-                            <span class="prod-confidential"><i class="fa-solid fa-lock"></i> ConnectSecure Ingestion</span>
+                            <span class="prod-badge"><i class="fa-solid fa-building-shield"></i> Company Project — Details Anonymized</span>
+                            <span class="prod-confidential"><i class="fa-solid fa-lock"></i> Enterprise Data Pipeline</span>
                         </div>
-                        <div class="prod-metric-pill">50% Token Savings</div>
+                        <span class="prod-metric-pill">50% Token Savings</span>
                     </div>
+                    
                     <h3 class="prod-title">Multimodal Data Ingestion &amp; Token Optimizer</h3>
-                    <p class="prod-desc">
-                        Designed text, table, and image data ingestion pipelines for enterprise RAG engines. Optimized document chunking and payload tokenization to accelerate vector retrieval index build speeds while cutting memory overhead.
-                    </p>
+                    <p class="prod-one-liner"><em>High-throughput document extraction and payload token optimization pipeline for enterprise RAG engines.</em></p>
+                    
+                    <div class="prod-contribution-box">
+                        <strong>My Contribution:</strong> Designed text, table, and image data ingestion pipelines, optimized document chunking strategies to cut memory overhead by 35%, and authored GCP infrastructure definitions.
+                    </div>
+
                     <div class="prod-tech-tags">
                         <span class="tag">Python</span>
                         <span class="tag">FastAPI</span>
                         <span class="tag">LlamaIndex</span>
                         <span class="tag">PostgreSQL</span>
                         <span class="tag">Docker</span>
-                        <span class="tag">GCP</span>
+                        <span class="tag">GCP Cloud Run</span>
+                    </div>
+
+                    <div class="prod-card-footer">
+                        <button class="btn btn-primary btn-sm view-case-study-btn" data-case-id="case-3">
+                            View Case Study <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -399,79 +430,86 @@
             <!-- Skill Category Filters -->
             <div class="skills-filter">
                 <button class="filter-btn active" data-filter="all">All Skills</button>
-                <button class="filter-btn" data-filter="ai">AI / ML</button>
-                <button class="filter-btn" data-filter="backend">Backend</button>
-                <button class="filter-btn" data-filter="cloud">Cloud / DevOps</button>
-                <button class="filter-btn" data-filter="frontend">Frontend &amp; Others</button>
+                <button class="filter-btn" data-filter="ai">AI &amp; GenAI</button>
+                <button class="filter-btn" data-filter="backend">Backend Engineering</button>
+                <button class="filter-btn" data-filter="database">Databases &amp; Data</button>
+                <button class="filter-btn" data-filter="cloud">Cloud &amp; DevOps</button>
+                <button class="filter-btn" data-filter="tools">Tools &amp; Frameworks</button>
             </div>
             
             <div class="skills-grid">
-                <!-- AI / ML Group -->
+                <!-- AI & GenAI Group -->
                 <div class="skill-card glass" data-category="ai">
                     <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
-                    <h3>AI / ML &amp; RAG</h3>
+                    <h3>AI &amp; GenAI</h3>
                     <div class="skill-tags">
                         <span class="tag">RAG</span>
                         <span class="tag">AI Agents</span>
-                        <span class="tag">Hermes Framework</span>
-                        <span class="tag">Claude Code</span>
+                        <span class="tag">Hermes Agent Framework</span>
                         <span class="tag">LangGraph</span>
                         <span class="tag">LlamaIndex</span>
-                        <span class="tag">MCP Server</span>
+                        <span class="tag">FastMCP</span>
                         <span class="tag">Prompt Engineering</span>
                         <span class="tag">LLM Evaluation</span>
                         <span class="tag">pgvector</span>
                         <span class="tag">Milvus</span>
                         <span class="tag">vLLM</span>
-                        <span class="tag">Langfuse</span>
-                        <span class="tag">OpenTelemetry</span>
                     </div>
                 </div>
                 
-                <!-- Backend Group -->
+                <!-- Backend Engineering Group -->
                 <div class="skill-card glass" data-category="backend">
                     <div class="card-icon"><i class="fa-solid fa-terminal"></i></div>
-                    <h3>Backend Development</h3>
+                    <h3>Backend Engineering</h3>
                     <div class="skill-tags">
                         <span class="tag">Python</span>
                         <span class="tag">Django</span>
                         <span class="tag">FastAPI</span>
                         <span class="tag">REST APIs</span>
+                        <span class="tag">Async Processing</span>
+                        <span class="tag">Microservices</span>
+                        <span class="tag">Temporal</span>
+                    </div>
+                </div>
+
+                <!-- Databases & Data Group -->
+                <div class="skill-card glass" data-category="database">
+                    <div class="card-icon"><i class="fa-solid fa-database"></i></div>
+                    <h3>Databases &amp; Data</h3>
+                    <div class="skill-tags">
                         <span class="tag">PostgreSQL (RLS)</span>
                         <span class="tag">Redis</span>
                         <span class="tag">Supabase</span>
-                        <span class="tag">Temporal</span>
-                        <span class="tag">Microservices</span>
+                        <span class="tag">Vector Search</span>
+                        <span class="tag">Hybrid Search (RRF)</span>
                     </div>
                 </div>
                 
-                <!-- Cloud/DevOps Group -->
+                <!-- Cloud & DevOps Group -->
                 <div class="skill-card glass" data-category="cloud">
                     <div class="card-icon"><i class="fa-solid fa-cloud"></i></div>
                     <h3>Cloud &amp; DevOps</h3>
                     <div class="skill-tags">
-                        <span class="tag">GCP</span>
-                        <span class="tag">Cloudflare Workers AI</span>
+                        <span class="tag">GCP (Cloud Run)</span>
                         <span class="tag">Docker</span>
                         <span class="tag">Kubernetes</span>
-                        <span class="tag">CI/CD</span>
-                        <span class="tag">SonarQube</span>
-                        <span class="tag">Turbopack</span>
+                        <span class="tag">CI/CD (GitHub Actions)</span>
+                        <span class="tag">Cloudflare Workers</span>
                     </div>
                 </div>
 
-                <!-- Frontend Group -->
-                <div class="skill-card glass" data-category="frontend">
-                    <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                    <h3>Frontend &amp; Hardware</h3>
+                <!-- Tools & Frameworks Group -->
+                <div class="skill-card glass" data-category="tools">
+                    <div class="card-icon"><i class="fa-solid fa-toolbox"></i></div>
+                    <h3>Tools &amp; Frameworks</h3>
                     <div class="skill-tags">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">React</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Tailwind CSS</span>
-                        <span class="tag">Unity 3D</span>
-                        <span class="tag">ESP32 (IoT)</span>
-                        <span class="tag">Firebase</span>
+                        <span class="tag">OpenTelemetry</span>
+                        <span class="tag">Langfuse</span>
+                        <span class="tag">Tesseract OCR</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Linux</span>
+                        <span class="tag">Claude Code</span>
+                        <span class="tag">Playwright</span>
                     </div>
                 </div>
             </div>
@@ -827,6 +865,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- Case Study Modal System -->
+    <div class="modal-overlay" id="case-study-modal" aria-hidden="true">
+        <div class="modal-card glass">
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body" id="modal-body">
+                <!-- Dynamically populated by script.js -->
+            </div>
+        </div>
+    </div>
 
     <!-- JavaScript File -->
     <script src="script.js"></script>
