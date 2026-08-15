@@ -119,7 +119,7 @@ img {
 }
 
 .section {
-    padding: 8rem 0 4rem;
+    padding: 3.5rem 0 2rem;
     position: relative;
     z-index: 2;
 }
@@ -430,8 +430,8 @@ img {
    HERO SECTION
    ========================================== */
 .hero-section {
-    padding-top: 10rem;
-    min-height: 95vh;
+    padding: 7rem 0 2.5rem;
+    min-height: auto;
     display: flex;
     align-items: center;
     position: relative;
@@ -441,7 +441,7 @@ img {
 .hero-container {
     display: flex;
     flex-direction: column;
-    max-width: 900px;
+    max-width: 850px;
     align-items: flex-start;
 }
 
@@ -604,7 +604,7 @@ img {
    ========================================== */
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .section-tag {
@@ -830,8 +830,8 @@ img {
 
 .timeline-item {
     position: relative;
-    padding: 2rem;
-    margin-bottom: 2.5rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
     margin-left: 50px;
 }
 
