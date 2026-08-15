@@ -424,7 +424,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Smart Helmet for Underground Mining Safety",
             label: "IoT & Full-Stack Web · PES University Capstone",
             oneLiner: "Microcontroller-based protective helmet integrating toxic gas sensors, IMU motion telemetry, and full-stack web alerting dashboard.",
-            overview: "Engineered an IoT-enabled safety monitoring system for subterranean mine workers, integrating hardware firmware logic with full-stack web dashboards to track ambient air toxicity and detect worker falls in hazardous mining shafts in real time.",
+            overview: "Engineered an IoT-enabled safety monitoring system for subterranean mine workers, combining embedded C++ on the ESP32 microcontroller with full-stack web dashboards to track ambient air toxicity and detect worker falls in hazardous mining shafts in real time.",
             problem: "Underground mining environments present severe occupational hazards including undetected toxic gas leaks (CO, methane), sudden oxygen depletion, and physical disorientation where standard wired telemetry fails.",
             architecture: `
                 <div class="modal-arch-container">
@@ -432,7 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="m-arch-flow">
                         <div class="m-node"><i class="fa-solid fa-head-side-mask"></i><span>1. Gas &amp; IMU Sensors</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-microchip"></i><span>2. ESP32 Firmware</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-microchip"></i><span>2. ESP32 (C++)</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                         <div class="m-node"><i class="fa-solid fa-cloud-arrow-up"></i><span>3. Firebase / ThingSpeak</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
@@ -440,7 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
             `,
-            myContribution: "Programmed the hardware firmware on the ESP32 microcontroller; integrated analog multi-gas sensors (MQ series) and 6-axis IMU accelerometer sensors; coded fall-detection thresholds and built the full-stack web monitoring dashboard with real-time cloud dispatch to Firebase and ThingSpeak.",
+            myContribution: "Programmed embedded C++ logic on the ESP32 microcontroller; interfaced analog multi-gas sensors (MQ series) and 6-axis IMU accelerometer sensors; coded fall-detection thresholds and built the full-stack web monitoring dashboard with real-time cloud dispatch to Firebase and ThingSpeak.",
             challenges: "Calibrating gas sensor baseline thresholds under high-humidity mine shaft environments and ensuring low-latency sub-second dashboard updates during threshold violations.",
             outcome: "Delivered a working end-to-end prototype with real-time cloud sensor telemetry and instant auditory and web supervisor alerts during environmental hazard detection.",
             techStack: ["C++", "ESP32", "Full-Stack Web", "Firebase", "ThingSpeak", "IoT Sensors", "Microcontroller"]
