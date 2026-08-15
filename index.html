@@ -169,167 +169,153 @@
         </div>
     </section>
 
-    <!-- Featured Work (Case Studies) Section -->
+    <!-- Featured Production Work Section -->
     <section class="featured-work-section section" id="featured-work">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Production Experience</span>
                 <h2 class="section-title">Featured Production Work</h2>
-                <p class="section-subtitle">Case studies of enterprise AI &amp; backend systems engineered in production (proprietary details anonymized).</p>
+                <p class="section-subtitle">Real-world AI &amp; backend systems engineered in enterprise production settings.</p>
                 <div class="section-divider"></div>
             </div>
 
-            <div class="case-studies-grid">
-                <!-- Case Study 1 -->
-                <div class="case-study-card glass">
-                    <div class="case-study-header">
-                        <span class="cs-tag-badge"><i class="fa-solid fa-shield-halved"></i> Production System</span>
-                        <h3>Autonomous AI Support &amp; Remediation Agent</h3>
-                        <p class="case-study-confidential"><i class="fa-solid fa-lock"></i> Production Experience | Enterprise Security Portal</p>
+            <div class="prod-work-list">
+                <!-- Production Item 1 -->
+                <div class="prod-work-item glass">
+                    <div class="prod-work-top">
+                        <div class="prod-work-meta">
+                            <span class="prod-badge"><i class="fa-solid fa-shield-halved"></i> Production System</span>
+                            <span class="prod-confidential"><i class="fa-solid fa-lock"></i> ConnectSecure Portal</span>
+                        </div>
+                        <div class="prod-metric-pill">&gt;98% Triage Speedup</div>
                     </div>
-                    <p class="case-study-desc">
+                    <h3 class="prod-title">Autonomous AI Support &amp; Remediation Agent</h3>
+                    <p class="prod-desc">
                         Built and deployed an autonomous AI support agent in a production ticketing portal. Integrated Grafana Loki MCP server for log querying, Tesseract OCR for screenshot parsing, PostgreSQL pgvector hybrid search, and Langfuse OpenTelemetry evaluation under strict human-in-the-loop (HITL) governance.
                     </p>
-                    <div class="case-study-contributions">
-                        <p><strong>Key Contribution:</strong> Multi-step agent reasoning, MCP tool connectors, OCR image parsing, and HITL confirmation gates.</p>
-                    </div>
-                    <div class="case-study-metrics">
-                        <div class="cs-metric">
-                            <span class="cs-value">&gt;98%</span>
-                            <span class="cs-label">Triage Time Reduction (Hours $\rightarrow$ &lt;2 mins)</span>
-                        </div>
-                        <div class="cs-metric">
-                            <span class="cs-value">80%</span>
-                            <span class="cs-label">Accuracy on Critical Lockout Incidents</span>
-                        </div>
-                    </div>
-                    <div class="case-study-footer">
-                        <strong>Tech:</strong> Python · Hermes Framework · FastMCP · Grafana Loki · Tesseract OCR · pgvector · Langfuse
+                    <div class="prod-tech-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Hermes Agent Framework</span>
+                        <span class="tag">FastMCP</span>
+                        <span class="tag">Grafana Loki</span>
+                        <span class="tag">Tesseract OCR</span>
+                        <span class="tag">pgvector</span>
+                        <span class="tag">Langfuse</span>
                     </div>
                 </div>
 
-                <!-- Case Study 2 -->
-                <div class="case-study-card glass">
-                    <div class="case-study-header">
-                        <span class="cs-tag-badge"><i class="fa-solid fa-brain"></i> Production System</span>
-                        <h3>Enterprise Hybrid-Search RAG Engine</h3>
-                        <p class="case-study-confidential"><i class="fa-solid fa-lock"></i> Production Experience | Qatar Govt &amp; Sports Medicine</p>
+                <!-- Production Item 2 -->
+                <div class="prod-work-item glass">
+                    <div class="prod-work-top">
+                        <div class="prod-work-meta">
+                            <span class="prod-badge"><i class="fa-solid fa-brain"></i> Production System</span>
+                            <span class="prod-confidential"><i class="fa-solid fa-lock"></i> Qatar Govt &amp; Sports Medicine</span>
+                        </div>
+                        <div class="prod-metric-pill">+44.5% Quality Uplift</div>
                     </div>
-                    <p class="case-study-desc">
-                        Architected multi-tenant RAG pipelines querying unstructured medical clinical PDFs and parental monitoring telemetry data. Designed reciprocal rank fusion (RRF) reranking over pgvector and Milvus vector databases, resolving complex timezone edge cases.
+                    <h3 class="prod-title">Enterprise Hybrid-Search RAG Engine</h3>
+                    <p class="prod-desc">
+                        Architected multi-tenant RAG pipelines querying unstructured medical clinical PDFs and parental monitoring telemetry data. Designed reciprocal rank fusion (RRF) reranking over pgvector and Milvus vector databases, boosting retrieval precision by 30%.
                     </p>
-                    <div class="case-study-contributions">
-                        <p><strong>Key Contribution:</strong> Retrieval pipeline design, hybrid IVFFlat search, document chunking, and metadata filtering.</p>
-                    </div>
-                    <div class="case-study-metrics">
-                        <div class="cs-metric">
-                            <span class="cs-value">+44.5%</span>
-                            <span class="cs-label">RAG Retrieval Quality Uplift</span>
-                        </div>
-                        <div class="cs-metric">
-                            <span class="cs-value">30%</span>
-                            <span class="cs-label">Document Retrieval Precision Boost</span>
-                        </div>
-                    </div>
-                    <div class="case-study-footer">
-                        <strong>Tech:</strong> Python · LlamaIndex · pgvector (RRF) · Milvus · GCP Cloud Run · Docker
+                    <div class="prod-tech-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">LlamaIndex</span>
+                        <span class="tag">pgvector (RRF)</span>
+                        <span class="tag">Milvus</span>
+                        <span class="tag">GCP Cloud Run</span>
+                        <span class="tag">Docker</span>
                     </div>
                 </div>
 
-                <!-- Case Study 3 -->
-                <div class="case-study-card glass">
-                    <div class="case-study-header">
-                        <span class="cs-tag-badge"><i class="fa-solid fa-server"></i> Production System</span>
-                        <h3>Unified B2B Billing &amp; Tenant Engine</h3>
-                        <p class="case-study-confidential"><i class="fa-solid fa-lock"></i> Production Experience | SaaS Billing Portal</p>
+                <!-- Production Item 3 -->
+                <div class="prod-work-item glass">
+                    <div class="prod-work-top">
+                        <div class="prod-work-meta">
+                            <span class="prod-badge"><i class="fa-solid fa-server"></i> Production System</span>
+                            <span class="prod-confidential"><i class="fa-solid fa-lock"></i> SaaS Billing Portal</span>
+                        </div>
+                        <div class="prod-metric-pill">Zero Revenue Leakage</div>
                     </div>
-                    <p class="case-study-desc">
-                        Developed a wholesale and retail billing consolidated portal integrating Chargebee and Supabase. Engineered transactional activation workflows, Django REST endpoints, and background user sync engines to prevent revenue leakage.
+                    <h3 class="prod-title">Unified B2B Billing &amp; Subscription Engine</h3>
+                    <p class="prod-desc">
+                        Developed a wholesale and retail billing consolidated portal integrating Chargebee and Supabase. Engineered transactional activation workflows, Django REST endpoints, and background user sync engines to ensure zero billing discrepancies.
                     </p>
-                    <div class="case-study-contributions">
-                        <p><strong>Key Contribution:</strong> B2B subscription workflow, transactional sync engines, and PostgreSQL RLS security.</p>
-                    </div>
-                    <div class="case-study-metrics">
-                        <div class="cs-metric">
-                            <span class="cs-value">100%</span>
-                            <span class="cs-label">Revenue Leakage Prevention</span>
-                        </div>
-                        <div class="cs-metric">
-                            <span class="cs-value">Zero</span>
-                            <span class="cs-label">Subscription Sync Discrepancies</span>
-                        </div>
-                    </div>
-                    <div class="case-study-footer">
-                        <strong>Tech:</strong> Django · Supabase · Chargebee · PostgreSQL (RLS) · Redis · REST APIs
+                    <div class="prod-tech-tags">
+                        <span class="tag">Django</span>
+                        <span class="tag">Supabase</span>
+                        <span class="tag">Chargebee</span>
+                        <span class="tag">PostgreSQL (RLS)</span>
+                        <span class="tag">Redis</span>
+                        <span class="tag">REST APIs</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Architecture Section -->
+    <!-- System Architecture Section -->
     <section class="architecture-section section" id="architecture">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">System Design</span>
                 <h2 class="section-title">AI System Architecture</h2>
-                <p class="section-subtitle">A production-grade blueprint for RAG retrieval, agent tool execution, and observability layers.</p>
+                <p class="section-subtitle">Blueprint for production RAG retrieval, agent tool execution, and observability layers.</p>
                 <div class="section-divider"></div>
             </div>
 
-            <div class="arch-diagram-card glass">
-                <div class="arch-flow">
-                    <div class="arch-node">
-                        <div class="arch-node-icon"><i class="fa-solid fa-user-gear"></i></div>
-                        <h4>1. Client Request</h4>
-                        <p>Web / API Gateway</p>
+            <div class="arch-card glass">
+                <div class="arch-pipeline">
+                    <div class="pipe-step">
+                        <span class="pipe-num">01</span>
+                        <h4>Client / Gateway</h4>
+                        <p>Web API Requests</p>
                     </div>
-                    <div class="arch-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-                    <div class="arch-node highlight-node">
-                        <div class="arch-node-icon"><i class="fa-solid fa-network-wired"></i></div>
-                        <h4>2. Agent Router</h4>
-                        <p>FastAPI / Django</p>
+                    <div class="pipe-sep"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="pipe-step active-step">
+                        <span class="pipe-num">02</span>
+                        <h4>Agent Router</h4>
+                        <p>FastAPI / Reasoning</p>
                     </div>
-                    <div class="arch-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-                    <div class="arch-node">
-                        <div class="arch-node-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                        <h4>3. Retrieval &amp; Tools</h4>
+                    <div class="pipe-sep"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="pipe-step">
+                        <span class="pipe-num">03</span>
+                        <h4>Retrieval &amp; Tools</h4>
                         <p>pgvector / FastMCP</p>
                     </div>
-                    <div class="arch-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-                    <div class="arch-node">
-                        <div class="arch-node-icon"><i class="fa-solid fa-sliders"></i></div>
-                        <h4>4. Eval &amp; Tracing</h4>
-                        <p>Langfuse / OpenTelemetry</p>
+                    <div class="pipe-sep"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="pipe-step">
+                        <span class="pipe-num">04</span>
+                        <h4>Eval &amp; Tracing</h4>
+                        <p>Langfuse OpenTelemetry</p>
                     </div>
-                    <div class="arch-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-                    <div class="arch-node highlight-node">
-                        <div class="arch-node-icon"><i class="fa-solid fa-robot"></i></div>
-                        <h4>5. LLM &amp; Output</h4>
-                        <p>Response / HITL Action</p>
+                    <div class="pipe-sep"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="pipe-step active-step">
+                        <span class="pipe-num">05</span>
+                        <h4>LLM &amp; Output</h4>
+                        <p>Verified Response</p>
                     </div>
                 </div>
-                
-                <div class="arch-callouts">
-                    <div class="arch-callout-item">
-                        <i class="fa-solid fa-shield-check callout-icon"></i>
+
+                <div class="arch-controls">
+                    <div class="control-item">
+                        <i class="fa-solid fa-shield-check"></i>
                         <div>
-                            <h4>Guardrails &amp; Safety</h4>
+                            <h4>Guardrails &amp; Validation</h4>
                             <p>Input sanitization, prompt injection defense, and fallback rules.</p>
                         </div>
                     </div>
-                    <div class="arch-callout-item">
-                        <i class="fa-solid fa-chart-line callout-icon"></i>
+                    <div class="control-item">
+                        <i class="fa-solid fa-chart-line"></i>
                         <div>
-                            <h4>Observability</h4>
-                            <p>Langfuse OpenTelemetry tracing for latency, cost, and token usage.</p>
+                            <h4>Production Observability</h4>
+                            <p>Langfuse OpenTelemetry tracing for latency, cost, and token metrics.</p>
                         </div>
                     </div>
-                    <div class="arch-callout-item">
-                        <i class="fa-solid fa-user-check callout-icon"></i>
+                    <div class="control-item">
+                        <i class="fa-solid fa-user-check"></i>
                         <div>
                             <h4>Human-in-the-Loop (HITL)</h4>
-                            <p>Strict admin approval gates before high-risk execution.</p>
+                            <p>Strict confirmation gates before critical execution steps.</p>
                         </div>
                     </div>
                 </div>
@@ -341,42 +327,53 @@
     <section class="methodology-section section" id="methodology">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Engineering Methodology</span>
+                <span class="section-tag">Engineering Approach</span>
                 <h2 class="section-title">How I Build AI Systems</h2>
-                <p class="section-subtitle">A structured 6-step workflow prioritizing reliability, speed, and cost efficiency.</p>
                 <div class="section-divider"></div>
             </div>
 
-            <div class="methodology-grid">
-                <div class="step-card glass">
-                    <div class="step-number">01</div>
-                    <h3>Understand Problem</h3>
-                    <p>Define clear SLA targets for retrieval precision, response latency, token budget, and security constraints.</p>
+            <div class="method-steps-bar glass">
+                <div class="method-step">
+                    <span class="m-num">1</span>
+                    <div>
+                        <h4>Understand Problem</h4>
+                        <p>Define SLAs, precision targets &amp; token budget.</p>
+                    </div>
                 </div>
-                <div class="step-card glass">
-                    <div class="step-number">02</div>
-                    <h3>Architect Pipeline</h3>
-                    <p>Design hybrid search indexing (pgvector RRF, Milvus), tool schemas, and agent routing state machines.</p>
+                <div class="method-step">
+                    <span class="m-num">2</span>
+                    <div>
+                        <h4>Architect Pipeline</h4>
+                        <p>Design pgvector RRF, Milvus &amp; tool schemas.</p>
+                    </div>
                 </div>
-                <div class="step-card glass">
-                    <div class="step-number">03</div>
-                    <h3>Build Tools &amp; APIs</h3>
-                    <p>Implement REST microservices, FastMCP servers, and async task queues using Python, FastAPI, and Redis.</p>
+                <div class="method-step">
+                    <span class="m-num">3</span>
+                    <div>
+                        <h4>Build Tools &amp; APIs</h4>
+                        <p>FastAPI microservices, FastMCP &amp; Redis.</p>
+                    </div>
                 </div>
-                <div class="step-card glass">
-                    <div class="step-number">04</div>
-                    <h3>Eval &amp; Guardrails</h3>
-                    <p>Establish double-blind evaluation benchmarks, OpenTelemetry tracing (Langfuse), and safety guardrails.</p>
+                <div class="method-step">
+                    <span class="m-num">4</span>
+                    <div>
+                        <h4>Eval &amp; Guardrails</h4>
+                        <p>Double-blind benchmarks &amp; Langfuse tracing.</p>
+                    </div>
                 </div>
-                <div class="step-card glass">
-                    <div class="step-number">05</div>
-                    <h3>Optimize Performance</h3>
-                    <p>Cut redundant LLM calls, optimize vector index search speeds, and memoize expensive data ingestion steps.</p>
+                <div class="method-step">
+                    <span class="m-num">5</span>
+                    <div>
+                        <h4>Optimize Performance</h4>
+                        <p>Cut redundant LLM calls &amp; index latency.</p>
+                    </div>
                 </div>
-                <div class="step-card glass">
-                    <div class="step-number">06</div>
-                    <h3>Deploy &amp; Monitor</h3>
-                    <p>Containerize with Docker, deploy to GCP Cloud Run, and continuously monitor error rates and trace logs.</p>
+                <div class="method-step">
+                    <span class="m-num">6</span>
+                    <div>
+                        <h4>Deploy &amp; Observe</h4>
+                        <p>Docker, GCP Cloud Run &amp; trace monitoring.</p>
+                    </div>
                 </div>
             </div>
         </div>
