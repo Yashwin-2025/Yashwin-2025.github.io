@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Check localStorage for saved theme, default to dark
     const savedTheme = localStorage.getItem('theme') || 'dark';
-    
+
     if (savedTheme === 'light') {
         body.classList.remove('dark-theme');
         body.classList.add('light-theme');
@@ -34,19 +34,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const nameEl = document.getElementById('typewriter-name');
     const nameCursor = document.querySelector('.type-cursor');
     const roleEl = document.getElementById('typewriter-role');
-    
+
     const nameText = "Yashwin S";
     const rolesList = [
         "AI & Backend Engineer",
         "Software Engineer - AI",
         "RAG & Backend Developer"
     ];
-    
+
     let nameIdx = 0;
     let roleIdx = 0;
     let rolesListIdx = 0;
     let isDeleting = false;
-    
+
     function typeName() {
         if (!nameEl) return;
         if (nameIdx <= nameText.length) {
@@ -58,11 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(typeRoles, 300);
         }
     }
-    
+
     function typeRoles() {
         if (!roleEl) return;
         const currentRole = rolesList[rolesListIdx];
-        
+
         if (isDeleting) {
             roleEl.textContent = currentRole.substring(0, roleIdx - 1);
             roleIdx--;
@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
             roleEl.textContent = currentRole.substring(0, roleIdx + 1);
             roleIdx++;
         }
-        
+
         let typeSpeed = isDeleting ? 35 : 75;
-        
+
         if (!isDeleting && roleIdx === currentRole.length) {
             typeSpeed = 2200; // Pause at the end before erasing
             isDeleting = true;
@@ -81,10 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
             rolesListIdx = (rolesListIdx + 1) % rolesList.length;
             typeSpeed = 450; // Pause before typing next role
         }
-        
+
         setTimeout(typeRoles, typeSpeed);
     }
-    
+
     if (nameEl) {
         setTimeout(typeName, 350);
     } else if (roleEl) {
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // SCROLL ACTIONS (HEADER HEIGHT & SHADOW)
     // ==========================================
     const header = document.querySelector('.header');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             skillCards.forEach(card => {
                 const category = card.getAttribute('data-category');
-                
+
                 if (filterValue === 'all' || category === filterValue) {
                     card.style.display = 'flex';
                     // Trigger reflow for animation
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const details = button.nextElementSibling;
             button.classList.toggle('active');
             details.classList.toggle('open');
-            
+
             if (details.classList.contains('open')) {
                 button.innerHTML = `Hide Details <i class="fa-solid fa-chevron-up"></i>`;
             } else {
@@ -241,30 +241,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const customCursor = document.getElementById('custom-cursor');
     let mouseX = 0, mouseY = 0;
     let cursorX = 0, cursorY = 0;
-    
+
     window.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
     });
-    
+
     function updateCursor() {
         const dx = mouseX - cursorX;
         const dy = mouseY - cursorY;
-        
+
         cursorX += dx * 0.15;
         cursorY += dy * 0.15;
-        
+
         if (customCursor) {
             customCursor.style.left = `${cursorX}px`;
             customCursor.style.top = `${cursorY}px`;
         }
-        
+
         requestAnimationFrame(updateCursor);
     }
-    
+
     if (window.innerWidth > 991 && customCursor) {
         requestAnimationFrame(updateCursor);
-        
+
         // Add hover effects for interactive elements
         const hoverSelector = 'a, button, .expand-timeline-btn, .expertise__item, input, textarea, .theme-toggle';
         const attachCursorHoverListeners = () => {
@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         };
-        
+
         attachCursorHoverListeners();
         // Re-attach if elements are filtered or dynamically shown
         const filterBtns = document.querySelectorAll('.filter-btn');
@@ -292,22 +292,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Timeline Progress scroll bar
     const progressBars = document.querySelectorAll('.timeline_progress-bar');
     const timelineItems = document.querySelectorAll('.timeline_item');
-    
+
     function updateTimelineProgress() {
         progressBars.forEach(bar => {
             const component = bar.closest('.timeline_component');
             if (!component) return;
-            
+
             const rect = component.getBoundingClientRect();
             const viewHeight = window.innerHeight;
             const startOffset = viewHeight * 0.55;
             const currentProgress = startOffset - rect.top;
-            
+
             let percent = (currentProgress / rect.height) * 100;
             percent = Math.min(100, Math.max(0, percent));
             bar.style.height = `${percent}%`;
         });
-        
+
         timelineItems.forEach(item => {
             const rect = item.getBoundingClientRect();
             const midPoint = window.innerHeight * 0.55;
@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    
+
     window.addEventListener('scroll', updateTimelineProgress);
     window.addEventListener('resize', updateTimelineProgress);
     setTimeout(updateTimelineProgress, 200);
@@ -549,14 +549,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // CONTACT FORM SUBMISSION
+    // CONTACT FORM SUBMISSION (DIRECT IN-BROWSER)
     // ==========================================
     const contactForm = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
     const formSubmitBtn = document.getElementById('form-submit');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
+        contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
@@ -577,30 +577,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (formSubmitBtn) {
                 formSubmitBtn.disabled = true;
-                formSubmitBtn.innerHTML = 'Opening Email Client... <i class="fa-solid fa-spinner fa-spin"></i>';
+                formSubmitBtn.innerHTML = 'Sending Message... <i class="fa-solid fa-spinner fa-spin"></i>';
             }
-
-            // Construct mailto link with pre-filled subject and body
-            const subject = encodeURIComponent(`Portfolio Message from ${name}`);
-            const body = encodeURIComponent(`Hello Yashwin,\n\n${message}\n\nBest regards,\n${name}\nEmail: ${email}`);
-            const mailtoUrl = `mailto:syashwin10@gmail.com?subject=${subject}&body=${body}`;
 
             if (formStatus) {
-                formStatus.className = 'form-status success';
-                formStatus.innerHTML = '<i class="fa-solid fa-circle-check"></i> Launching your email client to send to <strong>syashwin10@gmail.com</strong>...';
-                formStatus.style.display = 'block';
+                formStatus.style.display = 'none';
             }
 
-            // Trigger mailto link
-            window.location.href = mailtoUrl;
+            try {
+                // Submit directly in the browser via Web3Forms API
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        access_key: '214728cc-059e-4c8e-82a0-954b0c08cf43',
+                        name: name,
+                        email: email,
+                        message: message,
+                        subject: `New Portfolio Message from ${name}`,
+                        from_name: `${name} (Portfolio Contact)`
+                    })
+                });
 
-            setTimeout(() => {
+                const data = await response.json();
+
+                if (response.status === 200 && data.success) {
+                    if (formStatus) {
+                        formStatus.className = 'form-status success';
+                        formStatus.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent directly to Yashwin.';
+                        formStatus.style.display = 'block';
+                    }
+                    contactForm.reset();
+                } else {
+                    triggerMailtoFallback(name, email, message);
+                }
+            } catch (err) {
+                triggerMailtoFallback(name, email, message);
+            } finally {
                 if (formSubmitBtn) {
                     formSubmitBtn.disabled = false;
                     formSubmitBtn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
                 }
-                contactForm.reset();
-            }, 2500);
+            }
         });
+    }
+
+    function triggerMailtoFallback(name, email, message) {
+        const subject = encodeURIComponent(`Portfolio Message from ${name}`);
+        const body = encodeURIComponent(`Hello Yashwin,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`);
+        window.location.href = `mailto:syashwin10@gmail.com?subject=${subject}&body=${body}`;
+        if (formStatus) {
+            formStatus.className = 'form-status success';
+            formStatus.innerHTML = '<i class="fa-solid fa-envelope"></i> Message prepared for <strong>syashwin10@gmail.com</strong>.';
+            formStatus.style.display = 'block';
+        }
     }
 });
