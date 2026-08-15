@@ -937,7 +937,7 @@ img {
 }
 
 .timeline-details.open {
-    max-height: 800px; /* high threshold for smooth expansion */
+    max-height: 1500px; /* generous threshold for smooth expansion */
     margin-top: 1.5rem;
     border-top: 1px solid var(--border-color);
     padding-top: 1.5rem;
@@ -946,14 +946,20 @@ img {
 .details-list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 .details-list li {
-    font-size: 0.95rem;
+    font-size: 0.96rem;
     color: var(--text-secondary);
+    line-height: 1.65;
     position: relative;
-    padding-left: 1.5rem;
+    padding-left: 1.6rem;
+}
+
+.details-list li strong {
+    color: var(--text-primary);
+    font-weight: 600;
 }
 
 .details-list li::before {
@@ -961,7 +967,8 @@ img {
     position: absolute;
     left: 0;
     top: 0;
-    color: #00f2fe;
+    color: var(--accent-primary);
+    font-weight: 700;
 }
 
 .light-theme .details-list li::before {
@@ -1871,12 +1878,12 @@ img {
 .timeline_component {
     position: relative;
     padding: 2rem 0;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .timeline_progress {
     position: absolute;
-    left: 50%;
+    left: 225px;
     top: 0;
     bottom: 0;
     width: 3px;
@@ -1898,58 +1905,75 @@ img {
 
 .timeline_item {
     display: grid;
-    grid-template-columns: 1fr 80px 1fr;
-    margin-bottom: 5rem;
+    grid-template-columns: 200px 50px 1fr;
+    margin-bottom: 3.5rem;
     position: relative;
     z-index: 3;
 }
 
 .timeline_item:last-child {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .timeline_left {
     text-align: right;
-    padding-right: 30px;
+    padding-right: 20px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-end;
+    padding-top: 2.2rem;
 }
 
 .timeline_date-text {
-    font-family: var(--font-title);
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    background: var(--accent-glow);
+    border: 1px solid var(--border-color);
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+    white-space: nowrap;
 }
 
 .timeline_centre {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 2.4rem;
 }
 
 .timeline_circle {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background-color: var(--bg-main);
     border: 3px solid var(--accent-primary);
-    box-shadow: 0 0 0 6px var(--bg-main);
+    box-shadow: 0 0 0 5px var(--bg-main);
     transition: background-color var(--transition-normal), border-color var(--transition-normal);
 }
 
 .timeline_item.active .timeline_circle {
     background-color: var(--accent-secondary);
     border-color: var(--text-primary);
+    box-shadow: 0 0 15px var(--accent-glow);
 }
 
 .timeline_right {
-    padding-left: 30px;
+    padding-left: 20px;
+    width: 100%;
 }
 
 .timeline-card {
-    padding: 2.2rem;
+    padding: 2.2rem 2.6rem;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+}
+
+.timeline-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
 }
 
 /* Sticky CTA Buttons */
