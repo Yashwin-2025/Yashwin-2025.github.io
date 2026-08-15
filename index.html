@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashwin S | AI Backend & RAG Engineer</title>
+    
+    <!-- Meta Descriptions for SEO -->
+    <meta name="description" content="Portfolio of Yashwin S, AI Backend Engineer specializing in production RAG systems, LLM agents, and cloud architectures. Software Engineer at ConnectSecure.">
+    <meta name="keywords" content="Yashwin S, AI Engineer, Backend Engineer, RAG, LLM, LlamaIndex, FastMCP, Python, FastAPI, ConnectSecure">
+    <meta name="author" content="Yashwin S">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+
+
+    <!-- Custom Cursor -->
+    <div class="cursor-wrapper">
+        <div class="mouse-cur" id="custom-cursor">
+            <div class="mouse-cur-point"></div>
+        </div>
+    </div>
+
+
+
+    <!-- Background Gradients -->
+    <div class="blob-grid">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-bracket">&lt;</span>Yashwin<span class="logo-dot">.</span>S<span class="logo-bracket">/&gt;</span>
+            </a>
+            
+            <nav class="navbar" id="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#about" class="nav-link active">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#contact" class="nav-link contact-btn">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <!-- Theme Toggle Switch -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle visual theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                
+                <!-- Mobile Navigation Toggle -->
+                <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge animate-fade-in"><i class="fa-solid fa-terminal"></i> system_init.sh</div>
+                <h1 class="hero-title animate-slide-up">
+                    <span class="type-prefix">$ whoami --name</span><br>
+                    <span id="typewriter-name" class="gradient-text"></span><span class="type-cursor">|</span>
+                </h1>
+                <h2 class="hero-subtitle-tech animate-slide-up-delayed">
+                    <span class="prompt-arrow">&gt;</span> <span id="typewriter-role"></span><span class="terminal-cursor">█</span>
+                </h2>
+                <p class="hero-subtitle animate-slide-up-delayed">
+                    AI Backend Engineer building optimized RAG pipelines, LLM agents, and high-performance backend systems.
+                </p>
+                <div class="hero-cta animate-slide-up-delayed">
+                    <a href="#contact" class="sticky-button cta btn-primary-custom w-inline-block">
+                        <div class="sticky-text-block">Establish Connection <i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="sticky-hover-color"></div>
+                    </a>
+                    <a href="resume.pdf" download class="sticky-button cta btn-secondary-custom w-inline-block">
+                        <div class="sticky-text-block"><i class="fa-solid fa-file-pdf"></i> Download Resume</div>
+                        <div class="sticky-hover-color"></div>
+                    </a>
+                </div>
+                <div class="social-links animate-fade-in-delayed">
+                    <a href="https://github.com/Yashwin-2025" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/yashwin-s-35203b239/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:yashwinsblr@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-image-container animate-scale-in">
+                <div class="image-wrapper">
+                    <img src="yashwin_photo.jpeg" alt="Yashwin S" class="hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Who is Yashwin?</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text glass">
+                    <p>
+                        I am an AI Backend Engineer focused on building robust AI features and backend services. Currently, at <strong>ConnectSecure</strong>, I develop and optimize pipelines for RAG systems, B2B billing integrations, and AI support agents.
+                    </p>
+                    <p>
+                        With a solid foundation in Computer Science from PES University (CGPA 9.08) and hands-on experience in tools like LlamaIndex, Django, and FastAPI, I build high-performance data processing pipelines that optimize cost, speed, and reliability in enterprise settings.
+                    </p>
+                    <div class="highlights">
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-bolt highlight-icon"></i>
+                            <div>
+                                <h4>Optimization Expert</h4>
+                                <p>35% memory reduction and 2-3x speedups in ingestion pipelines.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-gears highlight-icon"></i>
+                            <div>
+                                <h4>Agentic Architect</h4>
+                                <p>Building autonomous coding agents and microservice generators.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quick-facts glass">
+                    <h3>Quick Facts</h3>
+                    <ul class="facts-list">
+                        <li><strong><i class="fa-solid fa-briefcase"></i> Current Role:</strong> Software Engineer at ConnectSecure</li>
+                        <li><strong><i class="fa-solid fa-graduation-cap"></i> Education:</strong> B.Tech in CS, PES University (9.08 CGPA)</li>
+                        <li><strong><i class="fa-solid fa-location-dot"></i> Location:</strong> Bangalore, India</li>
+                        <li><strong><i class="fa-solid fa-code"></i> Main Tech:</strong> Python, FastAPI, LlamaIndex, Docker, GCP</li>
+                        <li><strong><i class="fa-solid fa-award"></i> Scholarships:</strong> 3x Prof. MRD, 1x CNR Rao, 2x DAC</li>
+                    </ul>
+                    <div style="margin-top: 1.8rem; display: flex; justify-content: center;">
+                        <a href="resume.pdf" download class="sticky-button cta btn-secondary-custom w-inline-block" style="width: 100%;">
+                            <div class="sticky-text-block" style="justify-content: center; width: 100%;"><i class="fa-solid fa-file-pdf"></i> Download Resume</div>
+                            <div class="sticky-hover-color"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Technical Skillset</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <!-- Skill Category Filters -->
+            <div class="skills-filter">
+                <button class="filter-btn active" data-filter="all">All Skills</button>
+                <button class="filter-btn" data-filter="ai">AI / ML</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="cloud">Cloud / DevOps</button>
+                <button class="filter-btn" data-filter="frontend">Frontend &amp; Others</button>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- AI / ML Group -->
+                <div class="skill-card glass" data-category="ai">
+                    <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>AI / ML &amp; RAG</h3>
+                    <div class="skill-tags">
+                        <span class="tag">RAG</span>
+                        <span class="tag">AI Agents</span>
+                        <span class="tag">Hermes Framework</span>
+                        <span class="tag">Claude Code</span>
+                        <span class="tag">LangGraph</span>
+                        <span class="tag">LlamaIndex</span>
+                        <span class="tag">MCP Server</span>
+                        <span class="tag">Prompt Engineering</span>
+                        <span class="tag">LLM Evaluation</span>
+                        <span class="tag">pgvector</span>
+                        <span class="tag">Milvus</span>
+                        <span class="tag">vLLM</span>
+                        <span class="tag">Langfuse</span>
+                        <span class="tag">OpenTelemetry</span>
+                    </div>
+                </div>
+                
+                <!-- Backend Group -->
+                <div class="skill-card glass" data-category="backend">
+                    <div class="card-icon"><i class="fa-solid fa-terminal"></i></div>
+                    <h3>Backend Development</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Django</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">PostgreSQL (RLS)</span>
+                        <span class="tag">Redis</span>
+                        <span class="tag">Supabase</span>
+                        <span class="tag">Zitadel Auth</span>
+                        <span class="tag">Chargebee</span>
+                        <span class="tag">Temporal</span>
+                        <span class="tag">Microservices</span>
+                    </div>
+                </div>
+                
+                <!-- Cloud/DevOps Group -->
+                <div class="skill-card glass" data-category="cloud">
+                    <div class="card-icon"><i class="fa-solid fa-cloud"></i></div>
+                    <h3>Cloud &amp; DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="tag">GCP</span>
+                        <span class="tag">Cloudflare Workers AI</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">SonarQube</span>
+                        <span class="tag">Turbopack</span>
+                    </div>
+                </div>
+
+                <!-- Frontend Group -->
+                <div class="skill-card glass" data-category="frontend">
+                    <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Frontend &amp; Hardware</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">Unity 3D</span>
+                        <span class="tag">ESP32 (IoT)</span>
+                        <span class="tag">Firebase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Career History</span>
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="timeline_component">
+                <div class="timeline_progress">
+                    <div class="timeline_progress-bar"></div>
+                </div>
+
+                <!-- Timeline Item 1 -->
+                <div class="timeline_item">
+                    <div class="timeline_left">
+                        <div class="timeline_date-text">Jul 2025 -- Present</div>
+                    </div>
+                    <div class="timeline_centre">
+                        <div class="timeline_circle"></div>
+                    </div>
+                    <div class="timeline_right">
+                        <div class="timeline-card glass">
+                            <div class="timeline-header">
+                                <h3>Software Engineer - AI</h3>
+                                <span class="company"><i class="fa-solid fa-building"></i> ConnectSecure</span>
+                            </div>
+                            <p class="timeline-brief">Developing RAG pipelines, B2B billing integrations, autonomous support agents, and backend microservices.</p>
+                            
+                            <button class="expand-timeline-btn">View Details <i class="fa-solid fa-chevron-down"></i></button>
+                            
+                            <div class="timeline-details">
+                                <ul class="details-list">
+                                    <li>
+                                        <strong>Autonomous Support &amp; Remediation Agent:</strong> 
+                                        Built and deployed an autonomous AI support agent in the production ticketing portal; integrated a Grafana MCP server for log querying, Tesseract OCR for screenshot parsing, PostgreSQL pgvector hybrid search (+44.5% quality uplift), and GLM 5.2 / Langfuse trace evaluation.
+                                    </li>
+                                    <li>
+                                        <strong>Unified Tenant &amp; Distributor Dashboard:</strong> 
+                                        Created a B2B wholesale and retail billing consolidated portal (Chargebee/Supabase) using Django endpoints, transactional activations, and user sync engines to prevent revenue leakage.
+                                    </li>
+                                    <li>
+                                        <strong>Parental Monitoring RAG (GCP):</strong> 
+                                        Architected parental monitoring RAG for the Qatar Government, improving response accuracy by 30% and retrieval precision by 30% using pgvector hybrid search (RRF) and resolving timezone edge cases.
+                                    </li>
+                                    <li>
+                                        <strong>Multimodal Ingestion Pipeline:</strong> 
+                                        Designed text, table, and image ingestion reducing memory usage by 35% and LLM tokens by 50%; authored GCP infrastructure definitions (SAD) with VM latency and cost analysis.
+                                    </li>
+                                    <li>
+                                        <strong>Frontend Performance Optimization:</strong> 
+                                        Optimized React/Next.js (Turbopack, Next.js 16) analytics dashboard, cutting compile times by 35%, redundant re-renders by 40%, and DB overhead by 45% using context memoization.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 2 -->
+                <div class="timeline_item">
+                    <div class="timeline_left">
+                        <div class="timeline_date-text">Jan 2025 -- Jun 2025</div>
+                    </div>
+                    <div class="timeline_centre">
+                        <div class="timeline_circle"></div>
+                    </div>
+                    <div class="timeline_right">
+                        <div class="timeline-card glass">
+                            <div class="timeline-header">
+                                <h3>AI Intern</h3>
+                                <span class="company"><i class="fa-solid fa-building"></i> ConnectSecure</span>
+                            </div>
+                            <p class="timeline-brief">Sports Medicine Client (Qatar) -- Journal RAG system over medical PDFs.</p>
+                            
+                            <button class="expand-timeline-btn">View Details <i class="fa-solid fa-chevron-down"></i></button>
+                            
+                            <div class="timeline-details">
+                                <ul class="details-list">
+                                    <li>
+                                        <strong>Journal RAG for Qatar Sports Medicine:</strong> 
+                                        Built a hybrid-search RAG system over medical PDFs, improving clinician QA performance by 25% across evaluation benchmarks.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline_item">
+                    <div class="timeline_left">
+                        <div class="timeline_date-text">Jun 2023 -- Sep 2023</div>
+                    </div>
+                    <div class="timeline_centre">
+                        <div class="timeline_circle"></div>
+                    </div>
+                    <div class="timeline_right">
+                        <div class="timeline-card glass">
+                            <div class="timeline-header">
+                                <h3>Research Intern</h3>
+                                <span class="company"><i class="fa-solid fa-university"></i> CDSAML-CCBD, PES University</span>
+                            </div>
+                            <p class="timeline-brief">Researched computer vision methods for autonomous road monitoring systems.</p>
+                            
+                            <button class="expand-timeline-btn">View Details <i class="fa-solid fa-chevron-down"></i></button>
+                            
+                            <div class="timeline-details">
+                                <ul class="details-list">
+                                    <li>
+                                        <strong>Dataset Creation:</strong> 
+                                        Curated a dataset of 11,800 images and 364 videos capturing challenging Indian road conditions, totaling over 52,000 instances across 6 classes.
+                                    </li>
+                                    <li>
+                                        <strong>Object Detection &amp; Depth Estimation:</strong> 
+                                        Trained YOLO v5 pothole detection models achieving 80% accuracy, and integrated MiDaS depth estimation models for automated road profiling.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects & Publications Section -->
+    <section class="projects-section section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Projects &amp; Publications</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="expertise__list">
+                <!-- Project 1 -->
+                <a href="https://link.springer.com/chapter/10.1007/978-981-97-2004-0_34" target="_blank" rel="noopener" class="expertise__item w-inline-block">
+                    <div class="expertise__item-number">01</div>
+                    <div class="expertise__item-name-wrapper">
+                        <div class="expertise__item-name">Pothole Detection (ACN'23)</div>
+                        <div class="expertise__item-des">- Springer Publication on road hazard monitoring</div>
+                    </div>
+                    <div class="expertise__tech-tags">
+                        <span>Python</span><span>YOLO v5</span><span>EfficientDet</span><span>CV</span>
+                    </div>
+                    <div class="expertise__arrow-icon">
+                        <svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.4493 10.2226L4.37909 27.2928L0.706947 23.618L17.7711 6.55071L18.6244 5.69719H17.4175H0.56981V0.5H27.5V27.4302H22.3028V10.5762V9.36905L21.4493 10.2226Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </a>
+                
+                <!-- Project 2 -->
+                <a href="https://ieeexplore.ieee.org/document/11232375" target="_blank" rel="noopener" class="expertise__item w-inline-block">
+                    <div class="expertise__item-number">02</div>
+                    <div class="expertise__item-name-wrapper">
+                        <div class="expertise__item-name">Enhancing LLMs with CA Knowledge</div>
+                        <div class="expertise__item-des">- IEEE Publication detailing custom domain RAG</div>
+                    </div>
+                    <div class="expertise__tech-tags">
+                        <span>Llama2</span><span>RAG</span><span>Vector DB</span><span>Python</span>
+                    </div>
+                    <div class="expertise__arrow-icon">
+                        <svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.4493 10.2226L4.37909 27.2928L0.706947 23.618L17.7711 6.55071L18.6244 5.69719H17.4175H0.56981V0.5H27.5V27.4302H22.3028V10.5762V9.36905L21.4493 10.2226Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="https://github.com/Yashwin-2025" target="_blank" rel="noopener" class="expertise__item w-inline-block">
+                    <div class="expertise__item-number">03</div>
+                    <div class="expertise__item-name-wrapper">
+                        <div class="expertise__item-name">Data Center Digital Twin</div>
+                        <div class="expertise__item-des">- Real-time thermal simulation room in Unity 3D</div>
+                    </div>
+                    <div class="expertise__tech-tags">
+                        <span>Unity 3D</span><span>Blender</span><span>C#</span><span>Data Vis</span>
+                    </div>
+                    <div class="expertise__arrow-icon">
+                        <svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.4493 10.2226L4.37909 27.2928L0.706947 23.618L17.7711 6.55071L18.6244 5.69719H17.4175H0.56981V0.5H27.5V27.4302H22.3028V10.5762V9.36905L21.4493 10.2226Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Project 4 -->
+                <a href="https://github.com/Yashwin-2025" target="_blank" rel="noopener" class="expertise__item w-inline-block">
+                    <div class="expertise__item-number">04</div>
+                    <div class="expertise__item-name-wrapper">
+                        <div class="expertise__item-name">Smart Helmet for Miners</div>
+                        <div class="expertise__item-des">- ESP32 fall detection and mining safety device</div>
+                    </div>
+                    <div class="expertise__tech-tags">
+                        <span>ESP32</span><span>Firebase</span><span>ThingSpeak</span><span>Edge ML</span>
+                    </div>
+                    <div class="expertise__arrow-icon">
+                        <svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.4493 10.2226L4.37909 27.2928L0.706947 23.618L17.7711 6.55071L18.6244 5.69719H17.4175H0.56981V0.5H27.5V27.4302H22.3028V10.5762V9.36905L21.4493 10.2226Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Project 5 -->
+                <a href="https://github.com/Yashwin-2025" target="_blank" rel="noopener" class="expertise__item w-inline-block">
+                    <div class="expertise__item-number">05</div>
+                    <div class="expertise__item-name-wrapper">
+                        <div class="expertise__item-name">PEScholar Analytics</div>
+                        <div class="expertise__item-des">- Scholar anti-bot scraping pipeline and dashboard</div>
+                    </div>
+                    <div class="expertise__tech-tags">
+                        <span>Python</span><span>Streamlit</span><span>MySQL</span><span>Selenium</span>
+                    </div>
+                    <div class="expertise__arrow-icon">
+                        <svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.4493 10.2226L4.37909 27.2928L0.706947 23.618L17.7711 6.55071L18.6244 5.69719H17.4175H0.56981V0.5H27.5V27.4302H22.3028V10.5762V9.36905L21.4493 10.2226Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-section section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Education</span>
+                <h2 class="section-title">Academic Background</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="timeline_component">
+                <div class="timeline_progress">
+                    <div class="timeline_progress-bar"></div>
+                </div>
+
+                <!-- Education Item 1 -->
+                <div class="timeline_item">
+                    <div class="timeline_left">
+                        <div class="timeline_date-text">Dec 2021 -- Aug 2025</div>
+                    </div>
+                    <div class="timeline_centre">
+                        <div class="timeline_circle"></div>
+                    </div>
+                    <div class="timeline_right">
+                        <div class="timeline-card glass">
+                            <div class="edu-header">
+                                <div class="edu-title-group">
+                                    <h3>B.Tech in Computer Science &amp; Engineering</h3>
+                                    <h4 class="university">PES University, Bangalore, India</h4>
+                                </div>
+                            </div>
+                            <div class="edu-gpa">
+                                <span class="gpa-label">Cumulative GPA:</span>
+                                <span class="gpa-value">9.08 / 10.0</span>
+                            </div>
+                            
+                            <div class="edu-body">
+                                <h4>Honors &amp; Scholarships:</h4>
+                                <ul class="edu-list">
+                                    <li><i class="fa-solid fa-trophy"></i> Recipient of 3 prestigious Prof. MRD scholarships for academic excellence.</li>
+                                    <li><i class="fa-solid fa-trophy"></i> Recipient of the CNR Rao Scholarship.</li>
+                                    <li><i class="fa-solid fa-trophy"></i> Recipient of 2 DAC (Dean's Academic Merit) scholarships.</li>
+                                </ul>
+                                
+                                <h4>Leadership &amp; Co-Curriculars:</h4>
+                                <ul class="edu-list">
+                                    <li><i class="fa-solid fa-users"></i> Member of the Event Management team for the AI Coding Club; organized and managed the "Terrathon 3.0" hackathon.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Contact Yashwin</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info glass">
+                    <h3>Contact Information</h3>
+                    <p>Have an interesting project, role, or collaboration idea? Reach out to me via email or follow my socials below.</p>
+                    
+                    <div class="info-items">
+                        <a href="mailto:yashwinsblr@gmail.com" class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>yashwinsblr@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yashwin-s-35203b239/" target="_blank" rel="noopener" class="info-item">
+                            <div class="info-icon"><i class="fa-brands fa-linkedin"></i></div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <p>yashwin-s-35203b239</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Yashwin-2025" target="_blank" rel="noopener" class="info-item">
+                            <div class="info-icon"><i class="fa-brands fa-github"></i></div>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p>Yashwin-2025</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container glass">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Hey Yashwin, I'd love to chat about..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="form-submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                        <div id="form-status" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Yashwin S. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Yashwin-2025" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yashwin-s-35203b239/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:yashwinsblr@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
