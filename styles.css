@@ -480,7 +480,7 @@ img {
     font-family: var(--font-mono);
     font-size: 1.4rem;
     font-weight: 500;
-    color: var(--accent-secondary);
+    color: var(--accent-primary);
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
@@ -494,7 +494,7 @@ img {
 
 .terminal-cursor {
     animation: blink 1s step-end infinite;
-    color: var(--accent-secondary);
+    color: var(--accent-primary);
 }
 
 @keyframes blink {
