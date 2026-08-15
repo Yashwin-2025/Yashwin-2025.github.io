@@ -368,86 +368,132 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalCloseBtn = document.getElementById('modal-close-btn');
 
     const caseStudiesData = {
-        "case-1": {
-            title: "Autonomous AI Support & Remediation Agent",
-            label: "Company Project — Details Anonymized",
-            oneLiner: "AI-powered workflow for processing application logs, parsing screenshot diagnostics, and executing triage steps.",
-            overview: "Built and deployed an autonomous AI support agent in a production incident ticketing portal. The agent processes inbound support tickets, runs diagnostic queries, parses attached error screenshots, and identifies system lockout root causes under human-in-the-loop governance.",
-            problem: "Support engineers spent excessive hours manually investigating recurring ticket lockouts, downloading application logs, parsing user screenshot attachments, and verifying database state across disparate systems.",
+        "pothole-detection": {
+            title: "Pothole Detection & Monocular Depth Estimation",
+            label: "Peer-Reviewed Paper · Springer ACN'23",
+            oneLiner: "Automated road hazard detection and monocular depth estimation pipeline evaluated on challenging Indian road conditions.",
+            overview: "Engineered an automated road hazard detection and depth profiling system to enhance road safety and vehicle telemetry. The research combined state-of-the-art computer vision models (YOLOv5 and EfficientDet) with monocular depth estimation algorithms (MiDaS) to detect road surface irregularities and estimate relative severity in real time.",
+            problem: "Automated road condition monitoring on Indian roadways suffers from severe visual noise, including extreme lighting variations, harsh tree shadows, complex pavement textures, and unstandardized road geometries, making standard depth sensors expensive and fragile.",
             architecture: `
                 <div class="modal-arch-container">
-                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> High-Level System Architecture Workflow</div>
+                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> High-Level Computer Vision Pipeline</div>
                     <div class="m-arch-flow">
-                        <div class="m-node"><i class="fa-solid fa-ticket"></i><span>1. Ticket / Image</span></div>
+                        <div class="m-node"><i class="fa-solid fa-video"></i><span>1. Video Stream</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-gears"></i><span>2. Agent Router</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-object-ungroup"></i><span>2. YOLOv5 / EfficientDet</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node"><i class="fa-solid fa-toolbox"></i><span>3. FastMCP Tools</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-layer-group"></i><span>3. MiDaS Depth</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node"><i class="fa-solid fa-sliders"></i><span>4. Langfuse Eval</span></div>
-                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-user-check"></i><span>5. HITL Action</span></div>
+                        <div class="m-node"><i class="fa-solid fa-map-location-dot"></i><span>4. Hazard Profiling</span></div>
                     </div>
                 </div>
             `,
-            myContribution: "Personally engineered the multi-step agent reasoning workflow using the Hermes Agent Framework; built FastMCP server tool connectors for Grafana Loki log querying and Tesseract OCR screenshot parsing; implemented PostgreSQL pgvector hybrid search and Langfuse OpenTelemetry trace evaluation.",
-            challenges: "Investigating output reliability during unstructured log parsing, preventing false positive remediation triggers, and integrating strict Human-in-the-Loop (HITL) approval gates before executing administrative state changes.",
-            outcome: "Slashed incident triage response times from hours to under 2 minutes, achieving 80% accuracy on critical lockout tickets in production.",
-            techStack: ["Python", "Hermes Agent Framework", "FastMCP", "Grafana Loki", "Tesseract OCR", "pgvector", "Langfuse", "OpenTelemetry"]
+            myContribution: "Curated and annotated a comprehensive dataset of 11,800 images and 364 video sequences across 6 classes of Indian road conditions (52,568 instances). Trained and tuned YOLOv5 and EfficientDet object detection architectures, integrated MiDaS monocular depth estimation, and co-authored the research paper published in Springer ACN'23.",
+            challenges: "Mitigating false positives caused by sharp asphalt shadows, balancing inference throughput for real-time video frames, and calculating relative hazard depth without active LiDAR sensors.",
+            outcome: "Achieved 80% detection accuracy on unseen test road footage and successfully published the findings in the Springer Advances in Computer Networks (ACN'23) proceedings.",
+            techStack: ["Python", "YOLO v5", "EfficientDet", "MiDaS Depth", "PyTorch", "OpenCV", "Roboflow"]
         },
-        "case-2": {
-            title: "Enterprise Hybrid-Search RAG Engine",
-            label: "Company Project — Details Anonymized",
-            oneLiner: "Multi-tenant hybrid-search RAG system for querying unstructured medical PDFs and telemetry data.",
-            overview: "Architected multi-tenant RAG retrieval pipelines capable of querying unstructured clinical PDFs, medical journals, and parental monitoring telemetry logs across enterprise environments.",
-            problem: "Querying dense medical clinical documents and high-volume telemetry logs suffered from poor precision with standard dense semantic vector search due to domain-specific terminology and complex temporal edge cases.",
+        "llm-ca-rag": {
+            title: "Enhancing LLMs with CA Knowledge (Domain RAG)",
+            label: "Peer-Reviewed Paper · IEEE ICASET 2025",
+            oneLiner: "Specialized domain RAG framework evaluating Llama2 on chartered accountancy and taxation textbooks.",
+            overview: "Researched and implemented a specialized Retrieval-Augmented Generation (RAG) framework designed to enhance open-source Large Language Models (Llama2) with domain-specific statutory accounting and taxation knowledge from ICAI Foundation textbooks.",
+            problem: "General-purpose foundation models frequently hallucinate or generate legally conflicting answers when queried on dense, localized accounting standards, multi-clause tax statutory definitions, and strict financial calculations.",
             architecture: `
                 <div class="modal-arch-container">
-                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> High-Level System Architecture Workflow</div>
+                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> High-Level Domain RAG Architecture</div>
                     <div class="m-arch-flow">
-                        <div class="m-node"><i class="fa-solid fa-file-pdf"></i><span>1. Raw Documents</span></div>
+                        <div class="m-node"><i class="fa-solid fa-book"></i><span>1. ICAI Textbooks</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-layer-group"></i><span>2. BM25 + Vector</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-scissors"></i><span>2. Semantic Chunking</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node"><i class="fa-solid fa-filter"></i><span>3. RRF Reranking</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-database"></i><span>3. Vector Index</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node"><i class="fa-solid fa-database"></i><span>4. pgvector / Milvus</span></div>
+                        <div class="m-node"><i class="fa-solid fa-brain"></i><span>4. Llama2 Generator</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-comment-dots"></i><span>5. Precision Response</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-check-double"></i><span>5. Verifiable QA</span></div>
                     </div>
                 </div>
             `,
-            myContribution: "Architected the hybrid-search retrieval strategy combining BM25 keyword matching with pgvector IVFFlat dense embeddings; implemented Reciprocal Rank Fusion (RRF) reranking algorithms, structured document chunking, and resolved complex timezone edge cases.",
-            challenges: "Balancing retrieval recall and precision across multimodal PDF tables and handling timezone discrepancies in telemetry data without degrading response latency.",
-            outcome: "Achieved a +44.5% quality uplift in retrieval accuracy and boosted document retrieval precision by 30%.",
-            techStack: ["Python", "LlamaIndex", "pgvector (RRF)", "Milvus", "FastAPI", "Docker", "GCP Cloud Run"]
+            myContribution: "Structured and preprocessed ICAI Chartered Accountancy textbook corpora; implemented dense semantic embeddings, vector database similarity search, and prompt synthesis pipelines on Llama2; evaluated factual accuracy and published in IEEE ICASET 2025.",
+            challenges: "Preserving the structural integrity of dense financial balance sheets and multi-section statutory taxation clauses during document chunking without fragmenting semantic meaning.",
+            outcome: "Demonstrated superior factual accuracy over baseline zero-shot models on domain QA benchmarks and published in IEEE ICASET 2025.",
+            techStack: ["Python", "Llama2", "RAG", "Vector DB", "Sentence-Transformers", "FastAPI", "PyTorch"]
         },
-        "case-3": {
-            title: "Multimodal Data Ingestion & Token Optimizer",
-            label: "Company Project — Details Anonymized",
-            oneLiner: "High-throughput document extraction and payload token optimization pipeline for enterprise RAG engines.",
-            overview: "Designed high-throughput data processing and ingestion pipelines capable of extracting text, tables, and images from large heterogeneous document streams for vector database indexing.",
-            problem: "Processing high-volume document uploads created heavy memory spikes on backend servers and generated excessive LLM token overhead during vector index construction.",
+        "smart-miner-helmet": {
+            title: "Smart Helmet for Underground Mining Safety",
+            label: "IoT & Edge ML · PES University Capstone",
+            oneLiner: "Microcontroller-based protective helmet integrating toxic gas sensors, IMU motion telemetry, and real-time cloud hazard alerts.",
+            overview: "Developed an IoT-enabled smart safety helmet designed to safeguard underground mine workers by continuously monitoring environmental air toxicity and detecting sudden physical falls or collisions in hazardous subterranean tunnels.",
+            problem: "Underground mining environments present life-threatening hazards including undetected toxic gas leaks (CO, methane), oxygen depletion, and physical disorientation, where conventional wired safety systems fail to provide real-time location and physiological alerts.",
             architecture: `
                 <div class="modal-arch-container">
-                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> High-Level System Architecture Workflow</div>
+                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> IoT Telemetry & Alerting Architecture</div>
                     <div class="m-arch-flow">
-                        <div class="m-node"><i class="fa-solid fa-cloud-arrow-up"></i><span>1. Upload Stream</span></div>
+                        <div class="m-node"><i class="fa-solid fa-head-side-mask"></i><span>1. Gas & IMU Sensors</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-scissors"></i><span>2. Ingestion & Memoization</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-microchip"></i><span>2. ESP32 Edge Logic</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node"><i class="fa-solid fa-coins"></i><span>3. Token Optimizer</span></div>
+                        <div class="m-node"><i class="fa-solid fa-cloud-arrow-up"></i><span>3. Firebase / ThingSpeak</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node"><i class="fa-solid fa-database"></i><span>4. Index Storage</span></div>
-                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-server"></i><span>5. GCP Cloud Run</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-triangle-exclamation"></i><span>4. Live Alert Dashboard</span></div>
                     </div>
                 </div>
             `,
-            myContribution: "Designed text, table, and image data ingestion pipelines; implemented memory-bounded chunking and context memoization to optimize LLM payload tokenization, and authored GCP Cloud Run infrastructure definitions.",
-            challenges: "Eliminating memory leaks during complex PDF table extraction and reducing redundant LLM API calls without losing semantic context.",
-            outcome: "Reduced backend memory consumption by 35% and cut LLM token usage by 50% across data processing pipelines.",
-            techStack: ["Python", "FastAPI", "LlamaIndex", "PostgreSQL", "Docker", "GCP Cloud Run"]
+            myContribution: "Co-designed the hardware circuit and firmware logic on the ESP32 microcontroller; integrated gas sensors (MQ series) and 6-axis IMU accelerometer sensors; programmed fall detection thresholds and established real-time WiFi/cloud telemetry streaming to Firebase and ThingSpeak.",
+            challenges: "Calibrating gas sensor baseline thresholds under high-humidity environments and optimizing microcontroller battery power consumption for extended field shifts.",
+            outcome: "Delivered a working hardware prototype capable of streaming sub-second sensor telemetry and triggering instant auditory and supervisor dashboard alerts during threshold violations.",
+            techStack: ["C++", "ESP32", "Firebase", "ThingSpeak", "Edge ML", "IoT Sensors", "Microcontroller"]
+        },
+        "datacenter-digital-twin": {
+            title: "Data Center Digital Twin (Thermal & Heat Flow)",
+            label: "Digital Twin & Simulation · PES University",
+            oneLiner: "Interactive 3D simulation room in Unity 3D visualizing server rack airflow dynamics and spatial thermal dissipation.",
+            overview: "Created a real-time 3D digital twin of an enterprise data center facility, simulating thermal dissipation, server rack hotspot formation, and airflow cooling dynamics to optimize energy efficiency and cooling layout design.",
+            problem: "Data center server rooms expend massive energy on cooling infrastructure. Predicting hotspot emergence and airflow recirculation requires costly computational fluid dynamics (CFD) setups that lack interactive real-time visual feedback.",
+            architecture: `
+                <div class="modal-arch-container">
+                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> 3D Simulation & Data Flow</div>
+                    <div class="m-arch-flow">
+                        <div class="m-node"><i class="fa-solid fa-server"></i><span>1. Sensor Telemetry</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node"><i class="fa-solid fa-cubes"></i><span>2. Blender 3D Models</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node highlight"><i class="fa-brands fa-unity"></i><span>3. Unity Physics & C#</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-fire-flame-curved"></i><span>4. 3D Thermal Heatmap</span></div>
+                    </div>
+                </div>
+            `,
+            myContribution: "Modeled 3D server rack assets and layout architecture in Blender; wrote C# scripting in Unity 3D to simulate thermal gradient interpolation across spatial coordinates; rendered real-time dynamic heatmaps and visual airflow streamlines.",
+            challenges: "Achieving smooth real-time 3D rendering of complex spatial heat gradients while maintaining 60 FPS performance on standard workstations.",
+            outcome: "Produced an interactive, navigable 3D digital twin environment that visualizes thermal hotspots and cooling airflow efficiency in real time.",
+            techStack: ["Unity 3D", "C#", "Blender", "3D Modeling", "Data Visualization", "Physics Simulation"]
+        },
+        "pescholar-analytics": {
+            title: "PEScholar Research Publication Analytics",
+            label: "Data Engineering & Analytics · PES University",
+            oneLiner: "Automated scholar citation tracking, anti-bot web scraping engine, and interactive research analytics dashboard.",
+            overview: "Architected an end-to-end academic research intelligence platform that automatically scrapes, indexes, deduplicates, and visualizes publication records and citation metrics across university faculty departments.",
+            problem: "Aggregating institutional publication indices from diverse academic databases (Google Scholar, Scopus) is manual and prone to severe IP rate-limiting, CAPTCHA blocks, and author name ambiguity.",
+            architecture: `
+                <div class="modal-arch-container">
+                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> Automated Extraction & Analytics Pipeline</div>
+                    <div class="m-arch-flow">
+                        <div class="m-node"><i class="fa-solid fa-globe"></i><span>1. Academic Repos</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-robot"></i><span>2. Selenium + Proxy</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node"><i class="fa-solid fa-database"></i><span>3. MySQL DB</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-chart-line"></i><span>4. Streamlit UI</span></div>
+                    </div>
+                </div>
+            `,
+            myContribution: "Developed automated web scrapers in Python with Selenium, incorporating proxy rotation and browser fingerprint evasion; designed relational MySQL database schemas for author and citation normalization; built interactive data analytics dashboards in Streamlit.",
+            challenges: "Bypassing anti-bot protection mechanisms reliably without IP bans and deduplicating cross-listed conference and journal papers.",
+            outcome: "Automated the institutional publication tracking workflow, reducing data compilation time from weeks to minutes with interactive citation visualization dashboards.",
+            techStack: ["Python", "Selenium", "MySQL", "Streamlit", "Pandas", "Plotly", "Web Scraping"]
         }
     };
 
@@ -459,7 +505,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modalBody.innerHTML = `
             <div class="modal-case-header">
-                <span class="prod-badge"><i class="fa-solid fa-building-shield"></i> ${data.label}</span>
+                <span class="prod-badge"><i class="fa-solid fa-book-bookmark"></i> ${data.label}</span>
                 <h2>${data.title}</h2>
                 <p class="modal-one-liner"><em>${data.oneLiner}</em></p>
             </div>
@@ -475,7 +521,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
 
             <div class="modal-section">
-                <h3><i class="fa-solid fa-sitemap"></i> High-Level Architecture</h3>
+                <h3><i class="fa-solid fa-sitemap"></i> High-Level Architecture &amp; Workflow</h3>
                 ${data.architecture}
             </div>
 
