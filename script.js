@@ -620,11 +620,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Construct mailto link with pre-filled subject and body
             const subject = encodeURIComponent(`Portfolio Message from ${name}`);
             const body = encodeURIComponent(`Hello Yashwin,\n\n${message}\n\nBest regards,\n${name}\nEmail: ${email}`);
-            const mailtoUrl = `mailto:yashwinsblr@gmail.com?subject=${subject}&body=${body}`;
+            const mailtoUrl = `mailto:syashwin10@gmail.com?subject=${subject}&body=${body}`;
 
             if (formStatus) {
                 formStatus.className = 'form-status success';
-                formStatus.innerHTML = '<i class="fa-solid fa-circle-check"></i> Launching your email client to send to <strong>yashwinsblr@gmail.com</strong>...';
+                formStatus.innerHTML = '<i class="fa-solid fa-circle-check"></i> Launching your email client to send to <strong>syashwin10@gmail.com</strong>...';
                 formStatus.style.display = 'block';
             }
 
