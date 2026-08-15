@@ -447,28 +447,28 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         "datacenter-digital-twin": {
             title: "Data Center Digital Twin (Thermal & CFD Heat Flow)",
-            label: "CFD & Thermal Simulation · PES University",
-            oneLiner: "3D thermal simulation and computational fluid dynamics (CFD) modeling visualizing server rack airflow dynamics and spatial heat dissipation.",
-            overview: "Architected a digital twin simulation of an enterprise data center facility to analyze thermal dissipation, server rack hotspot emergence, and airflow circulation dynamics for cooling optimization.",
-            problem: "Data center server rooms expend massive energy on cooling infrastructure. Predicting hotspot emergence and airflow recirculation requires accurate computational fluid dynamics (CFD) simulation and spatial thermal gradient visualization.",
+            label: "Blender & CFD Simulation · PES University",
+            oneLiner: "3D thermal simulation and computational fluid dynamics (CFD) modeling in Blender visualizing server rack airflow dynamics and spatial heat dissipation.",
+            overview: "Architected a digital twin simulation of an enterprise data center facility in Blender to analyze thermal dissipation, server rack hotspot emergence, and airflow circulation dynamics for cooling optimization.",
+            problem: "Data center server rooms expend massive energy on cooling infrastructure. Predicting hotspot emergence and airflow recirculation requires accurate computational fluid dynamics (CFD) modeling and spatial thermal pattern visualization.",
             architecture: `
                 <div class="modal-arch-container">
-                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> CFD Thermal Simulation Pipeline</div>
+                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> Blender CFD Simulation Pipeline</div>
                     <div class="m-arch-flow">
-                        <div class="m-node"><i class="fa-solid fa-server"></i><span>1. Sensor Telemetry</span></div>
+                        <div class="m-node"><i class="fa-solid fa-server"></i><span>1. Facility Geometry</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                         <div class="m-node highlight"><i class="fa-solid fa-cubes"></i><span>2. Blender 3D Assets</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-calculator"></i><span>3. CFD Simulation (Python/C++)</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-wind"></i><span>3. CFD Airflow Simulation</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node"><i class="fa-solid fa-fire-flame-curved"></i><span>4. Real-Time Spatial Heatmap</span></div>
+                        <div class="m-node"><i class="fa-solid fa-fire-flame-curved"></i><span>4. Heat Flow Visualization</span></div>
                     </div>
                 </div>
             `,
-            myContribution: "Modeled 3D server rack assets and facility physical geometries in Blender; developed computational fluid dynamics (CFD) airflow simulation and spatial thermal gradient interpolation algorithms in Python and C++; rendered dynamic spatial heatmaps and airflow recirculation vectors.",
-            challenges: "Computing accurate continuous thermal gradients from discrete sensor points and optimizing simulation calculation times for responsive visual feedback.",
-            outcome: "Successfully visualized hotspot accumulation zones and cooling airflow recirculations across the facility layout.",
-            techStack: ["Blender", "CFD Simulation", "Python", "C++", "Thermal Modeling", "Data Visualization", "3D Modeling"]
+            myContribution: "Modeled high-fidelity 3D server rack assets and data center room geometries in Blender; set up and executed computational fluid dynamics (CFD) thermal dissipation simulations; rendered heat flow distributions and visual airflow streamlines across cold and hot server aisles.",
+            challenges: "Modeling complex multi-aisle geometric obstructions and simulating accurate boundary airflow conditions for thermal dissipation in Blender.",
+            outcome: "Successfully mapped hotspot accumulation areas and cooling airflow recirculation patterns across the data center layout.",
+            techStack: ["Blender", "CFD Simulation", "Thermal Modeling", "3D Design", "Heat Flow Analysis", "Data Visualization"]
         },
         "pescholar-analytics": {
             title: "PEScholar Research Publication Analytics",
