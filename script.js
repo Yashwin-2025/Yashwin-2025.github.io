@@ -29,35 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // TERMINAL TYPEWRITER EFFECT
+    // TERMINAL TYPEWRITER EFFECT (ROLES)
     // ==========================================
-    const nameEl = document.getElementById('typewriter-name');
     const roleEl = document.getElementById('typewriter-role');
     
-    const nameText = "Yashwin S";
     const rolesList = [
         "AI & Backend Engineer",
         "Software Engineer - AI",
         "RAG & Backend Developer"
     ];
     
-    let nameIdx = 0;
     let roleIdx = 0;
     let rolesListIdx = 0;
     let isDeleting = false;
-    
-    function typeName() {
-        if (nameEl && nameIdx < nameText.length) {
-            nameEl.textContent += nameText.charAt(nameIdx);
-            nameIdx++;
-            setTimeout(typeName, 120);
-        } else {
-            // Remove blinking animation from name cursor
-            const nameCursor = document.querySelector('.type-cursor');
-            if (nameCursor) nameCursor.style.animation = 'none';
-            setTimeout(typeRoles, 500);
-        }
-    }
     
     function typeRoles() {
         if (!roleEl) return;
@@ -85,8 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(typeRoles, typeSpeed);
     }
     
-    if (nameEl && roleEl) {
-        setTimeout(typeName, 800);
+    if (roleEl) {
+        setTimeout(typeRoles, 300);
     }
 
     // ==========================================
