@@ -394,31 +394,31 @@ document.addEventListener('DOMContentLoaded', () => {
             techStack: ["Python", "YOLO v5", "EfficientDet", "MiDaS Depth", "PyTorch", "OpenCV", "Roboflow"]
         },
         "llm-ca-rag": {
-            title: "Enhancing LLMs with CA Knowledge (Domain RAG)",
+            title: "Enhancing LLMs with CA Knowledge (Domain RAG & Fine-Tuning)",
             label: "Peer-Reviewed Paper · IEEE ICASET 2025",
-            oneLiner: "Specialized domain RAG framework evaluating Llama2 on chartered accountancy and taxation textbooks.",
-            overview: "Researched and implemented a specialized Retrieval-Augmented Generation (RAG) framework designed to enhance open-source Large Language Models (Llama2) with domain-specific statutory accounting and taxation knowledge from ICAI Foundation textbooks.",
-            problem: "General-purpose foundation models frequently hallucinate or generate legally conflicting answers when queried on dense, localized accounting standards, multi-clause tax statutory definitions, and strict financial calculations.",
+            oneLiner: "Comparative study of advanced RAG methodologies (Simple RAG, Self-RAG, RAG-Fusion, HyDE) and fine-tuned LLaMA-2 7B for Indian Chartered Accountancy exam preparation.",
+            overview: "Conducted an in-depth research analysis of Large Language Model (LLM) techniques designed to provide an AI-assisted learning experience for candidates preparing for Indian Chartered Accountancy (CA) exams. Utilizing LLaMA-2 7B combined with data augmentation and domain fine-tuning over extensive CA textbooks, the system delivers precise, contextually relevant answers aligned with the ICAI curriculum.",
+            problem: "General-purpose foundation models frequently hallucinate or produce conflicting interpretations when queried on dense statutory taxation clauses, multi-clause auditing rules, and complex financial calculations required in CA exams.",
             architecture: `
                 <div class="modal-arch-container">
-                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> High-Level Domain RAG Architecture</div>
+                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> CA Domain RAG &amp; Fine-Tuning Pipeline</div>
                     <div class="m-arch-flow">
-                        <div class="m-node"><i class="fa-solid fa-book"></i><span>1. ICAI Textbooks</span></div>
+                        <div class="m-node"><i class="fa-solid fa-book-open"></i><span>1. CA Textbooks</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-scissors"></i><span>2. Semantic Chunking</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-wand-magic-sparkles"></i><span>2. Data Aug &amp; Fine-Tune</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-database"></i><span>3. Vector Index</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-layer-group"></i><span>3. HyDE / Self-RAG / Fusion</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node"><i class="fa-solid fa-brain"></i><span>4. Llama2 Generator</span></div>
+                        <div class="m-node"><i class="fa-solid fa-brain"></i><span>4. LLaMA-2 7B</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-check-double"></i><span>5. Verifiable QA</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-gavel"></i><span>5. LLM-as-Judge Eval</span></div>
                     </div>
                 </div>
             `,
-            myContribution: "Structured and preprocessed ICAI Chartered Accountancy textbook corpora; implemented dense semantic embeddings, vector database similarity search, and prompt synthesis pipelines on Llama2; evaluated factual accuracy and published in IEEE ICASET 2025.",
-            challenges: "Preserving the structural integrity of dense financial balance sheets and multi-section statutory taxation clauses during document chunking without fragmenting semantic meaning.",
-            outcome: "Demonstrated superior factual accuracy over baseline zero-shot models on domain QA benchmarks and published in IEEE ICASET 2025.",
-            techStack: ["Python", "Llama2", "RAG", "Vector DB", "Sentence-Transformers", "FastAPI", "PyTorch"]
+            myContribution: "Structured the training dataset from an extensive collection of Indian CA textbooks; generated curated question-answer pairs for supervised fine-tuning of LLaMA-2 7B; benchmarked and compared multiple RAG techniques—including Simple RAG, Self-RAG, RAG-Fusion, and HyDE (Hypothetical Document Embeddings)—to identify the optimal retrieval combination; conducted two-fold evaluation using quantitative NLP criteria and qualitative LLM-as-a-judge assessments.",
+            challenges: "Mitigating hallucinations on intricate statutory provisions and optimizing retrieval precision across dense accounting tables and statutory legal definitions.",
+            outcome: "Demonstrated the effectiveness of combining domain fine-tuned LLaMA-2 7B with robust retrieval mechanisms, proving superior accuracy in answering CA curriculum queries, and successfully published in IEEE ICASET 2025.",
+            techStack: ["Python", "LLaMA-2 7B", "Self-RAG", "RAG-Fusion", "HyDE", "PyTorch", "Sentence-Transformers", "FastAPI", "HuggingFace"]
         },
         "smart-miner-helmet": {
             title: "Smart Helmet for Underground Mining Safety",

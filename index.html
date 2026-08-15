@@ -175,117 +175,96 @@
             <div class="section-header">
                 <span class="section-tag">Career History</span>
                 <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">Production AI systems, enterprise RAG architectures, and backend engineering at scale.</p>
                 <div class="section-divider"></div>
             </div>
             
-            <div class="timeline_component">
-                <div class="timeline_progress">
-                    <div class="timeline_progress-bar"></div>
-                </div>
-
-                <!-- Timeline Item 1: ConnectSecure SE -->
-                <div class="timeline_item">
-                    <div class="timeline_left">
-                        <div class="timeline_date-text">Jul 2025 – Present</div>
-                    </div>
-                    <div class="timeline_centre">
-                        <div class="timeline_circle"></div>
-                    </div>
-                    <div class="timeline_right">
-                        <div class="timeline-card glass">
-                            <div class="timeline-header">
-                                <h3>Software Engineer - AI</h3>
-                                <span class="company"><i class="fa-solid fa-building"></i> ConnectSecure</span>
-                            </div>
-                            <p class="timeline-brief">Engineering enterprise RAG pipelines, autonomous support agents, and backend microservices.</p>
-                            
-                            <button class="expand-timeline-btn">View Details <i class="fa-solid fa-chevron-down"></i></button>
-                            
-                            <div class="timeline-details">
-                                <ul class="details-list">
-                                    <li>
-                                        <strong>Autonomous AI Support &amp; Remediation Agent:</strong> 
-                                        Built and deployed an autonomous AI support agent in the production ticketing portal; integrated Grafana Loki MCP server for log querying, Tesseract OCR for screenshot parsing, PostgreSQL pgvector hybrid search, and double-blind evaluation pipeline achieving a <strong>+44.5% response quality score uplift</strong> with Langfuse OpenTelemetry tracking.
-                                    </li>
-                                    <li>
-                                        <strong>Parental Monitoring AI Assistant (Qatar Government GCP):</strong> 
-                                        Architected enterprise-grade RAG assistant on GCP, achieving a <strong>30% increase in response accuracy</strong> and <strong>50% reduction in LLM token usage</strong> via payload compression; deployed hybrid-search RAG with pgvector IVFFlat and Reciprocal Rank Fusion (RRF), boosting retrieval precision by <strong>~30%</strong>.
-                                    </li>
-                                    <li>
-                                        <strong>Distributed Data Orchestration &amp; MCP Microservices:</strong> 
-                                        Engineered distributed data orchestration for 200+ data models across 12+ ministry APIs, resolving 90% of dynamic schema validation errors; built 12+ FastMCP microservices with Redis async queues and transaction rollbacks.
-                                    </li>
-                                    <li>
-                                        <strong>Performance &amp; Code Optimization:</strong> 
-                                        Migrated workspace to Next.js 16 (Turbopack) cutting compile times by <strong>35%</strong>, eliminated <strong>40%</strong> of redundant re-renders via context memoization, and cut database query overhead by <strong>45%</strong> on plan limits checks via table counts aggregation caches.
-                                    </li>
-                                </ul>
-                            </div>
+            <div class="experience-list">
+                <!-- Experience Item 1: ConnectSecure SE -->
+                <div class="exp-card glass">
+                    <div class="exp-header">
+                        <div class="exp-title-group">
+                            <h3 class="exp-role">Software Engineer - AI</h3>
+                            <span class="company"><i class="fa-solid fa-building"></i> ConnectSecure</span>
                         </div>
+                        <div class="exp-date-badge"><i class="fa-solid fa-calendar-days"></i> Jul 2025 – Present</div>
+                    </div>
+                    
+                    <p class="timeline-brief">Engineering production RAG pipelines, autonomous AI support agents, Chargebee B2B billing integrations, and backend microservices.</p>
+                    
+                    <button class="expand-timeline-btn">View Details <i class="fa-solid fa-chevron-down"></i></button>
+                    
+                    <div class="timeline-details">
+                        <ul class="details-list">
+                            <li>
+                                <strong>Autonomous AI Support &amp; Remediation Agent:</strong> 
+                                Built and deployed an autonomous AI support agent in the production ticketing portal; integrated Grafana Loki MCP server for log querying, Tesseract OCR for screenshot parsing, PostgreSQL pgvector hybrid search, and double-blind evaluation pipeline achieving a <strong>+44.5% response quality score uplift</strong> with Langfuse OpenTelemetry tracking.
+                            </li>
+                            <li>
+                                <strong>Parental Monitoring AI Assistant (Qatar Government GCP):</strong> 
+                                Architected enterprise-grade RAG assistant on GCP, achieving a <strong>30% increase in response accuracy</strong> and <strong>50% reduction in LLM token usage</strong> via payload compression; deployed hybrid-search RAG with pgvector IVFFlat and Reciprocal Rank Fusion (RRF), boosting retrieval precision by <strong>~30%</strong>.
+                            </li>
+                            <li>
+                                <strong>Multimodal Data Ingestion Pipeline &amp; Token Optimization:</strong> 
+                                Designed text, table, and image data ingestion pipelines for enterprise RAG engines, reducing memory overhead by <strong>35%</strong> and LLM token consumption by <strong>50%</strong>; authored Solution Architecture Definitions (SAD) with GCP VM cost/latency analysis.
+                            </li>
+                            <li>
+                                <strong>B2B Billing Integration &amp; Dashboard Optimization:</strong> 
+                                Handled B2B billing integrations with <strong>Chargebee</strong> and Supabase transactional activations for tenant accounts; optimized Next.js 16 (Turbopack) analytics dashboard cutting local compile times by <strong>35%</strong>, eliminating <strong>40%</strong> of redundant re-renders via context memoization, and reducing database query overhead by <strong>45%</strong> on plan limits checks.
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 
-                <!-- Timeline Item 2: ConnectSecure Intern -->
-                <div class="timeline_item">
-                    <div class="timeline_left">
-                        <div class="timeline_date-text">Jan 2025 – Jun 2025</div>
-                    </div>
-                    <div class="timeline_centre">
-                        <div class="timeline_circle"></div>
-                    </div>
-                    <div class="timeline_right">
-                        <div class="timeline-card glass">
-                            <div class="timeline-header">
-                                <h3>AI Intern</h3>
-                                <span class="company"><i class="fa-solid fa-building"></i> ConnectSecure</span>
-                            </div>
-                            <p class="timeline-brief">Sports Medicine Client (Qatar) -- Hybrid search RAG system over clinical medical PDFs.</p>
-                            
-                            <button class="expand-timeline-btn">View Details <i class="fa-solid fa-chevron-down"></i></button>
-                            
-                            <div class="timeline-details">
-                                <ul class="details-list">
-                                    <li>
-                                        <strong>Clinical Journal RAG System:</strong> 
-                                        Built a hybrid-search RAG pipeline over medical clinical PDFs and journals, improving clinician QA response accuracy by <strong>25%</strong> by extracting structured medical entities and building a responsive FastAPI/React interface.
-                                    </li>
-                                </ul>
-                            </div>
+                <!-- Experience Item 2: ConnectSecure Intern -->
+                <div class="exp-card glass">
+                    <div class="exp-header">
+                        <div class="exp-title-group">
+                            <h3 class="exp-role">AI Intern</h3>
+                            <span class="company"><i class="fa-solid fa-building"></i> ConnectSecure</span>
                         </div>
+                        <div class="exp-date-badge"><i class="fa-solid fa-calendar-days"></i> Jan 2025 – Jun 2025</div>
+                    </div>
+                    
+                    <p class="timeline-brief">Sports Medicine Client (Qatar) -- Hybrid search RAG system over clinical medical PDFs and journals.</p>
+                    
+                    <button class="expand-timeline-btn">View Details <i class="fa-solid fa-chevron-down"></i></button>
+                    
+                    <div class="timeline-details">
+                        <ul class="details-list">
+                            <li>
+                                <strong>Clinical Journal RAG System:</strong> 
+                                Built a hybrid-search RAG pipeline over medical clinical PDFs and journals, improving clinician QA response accuracy by <strong>25%</strong> by extracting structured medical entities and building a responsive FastAPI/React interface.
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Timeline Item 3: PES Research Lab -->
-                <div class="timeline_item">
-                    <div class="timeline_left">
-                        <div class="timeline_date-text">Jun 2023 – Sep 2023</div>
-                    </div>
-                    <div class="timeline_centre">
-                        <div class="timeline_circle"></div>
-                    </div>
-                    <div class="timeline_right">
-                        <div class="timeline-card glass">
-                            <div class="timeline-header">
-                                <h3>Research Intern</h3>
-                                <span class="company"><i class="fa-solid fa-university"></i> CDSAML-CCBD, PES University</span>
-                            </div>
-                            <p class="timeline-brief">Researched computer vision and monocular depth estimation for autonomous road hazard monitoring.</p>
-                            
-                            <button class="expand-timeline-btn">View Details <i class="fa-solid fa-chevron-down"></i></button>
-                            
-                            <div class="timeline-details">
-                                <ul class="details-list">
-                                    <li>
-                                        <strong>Road Condition Dataset Creation:</strong> 
-                                        Curated and labeled a comprehensive dataset of 11,800 images and 364 videos (52,568 instances across 6 classes of Indian road conditions).
-                                    </li>
-                                    <li>
-                                        <strong>Object Detection &amp; Monocular Depth:</strong> 
-                                        Trained YOLOv5 and EfficientDet models achieving <strong>80% detection accuracy</strong>, and integrated MiDaS depth estimation alongside object detection for automated road hazard profiling.
-                                    </li>
-                                </ul>
-                            </div>
+                <!-- Experience Item 3: PES Research Lab -->
+                <div class="exp-card glass">
+                    <div class="exp-header">
+                        <div class="exp-title-group">
+                            <h3 class="exp-role">Research Intern</h3>
+                            <span class="company"><i class="fa-solid fa-university"></i> CDSAML-CCBD, PES University</span>
                         </div>
+                        <div class="exp-date-badge"><i class="fa-solid fa-calendar-days"></i> Jun 2023 – Sep 2023</div>
+                    </div>
+                    
+                    <p class="timeline-brief">Researched computer vision and monocular depth estimation for autonomous road hazard monitoring.</p>
+                    
+                    <button class="expand-timeline-btn">View Details <i class="fa-solid fa-chevron-down"></i></button>
+                    
+                    <div class="timeline-details">
+                        <ul class="details-list">
+                            <li>
+                                <strong>Road Condition Dataset Creation:</strong> 
+                                Curated and labeled a comprehensive dataset of 11,800 images and 364 videos (52,568 instances across 6 classes of Indian road conditions).
+                            </li>
+                            <li>
+                                <strong>Object Detection &amp; Monocular Depth:</strong> 
+                                Trained YOLOv5 and EfficientDet models achieving <strong>80% detection accuracy</strong>, and integrated MiDaS depth estimation alongside object detection for automated road hazard profiling.
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -344,25 +323,26 @@
                     <div class="prod-work-top">
                         <div class="prod-work-meta">
                             <span class="prod-badge"><i class="fa-solid fa-book-bookmark"></i> IEEE ICASET 2025 Publication</span>
-                            <span class="prod-confidential"><i class="fa-solid fa-brain"></i> Domain RAG Research</span>
+                            <span class="prod-confidential"><i class="fa-solid fa-brain"></i> Domain RAG &amp; Fine-Tuning</span>
                         </div>
-                        <span class="prod-metric-pill">IEEE 2025 Published</span>
+                        <span class="prod-metric-pill">IEEE 2025 Published · LLaMA-2 7B</span>
                     </div>
                     
-                    <h3 class="prod-title">Enhancing LLMs with CA Knowledge (Domain RAG)</h3>
-                    <p class="prod-one-liner"><em>Domain-specific Retrieval-Augmented Generation (RAG) pipeline on Llama2 evaluated with ICAI accounting textbooks.</em></p>
+                    <h3 class="prod-title">Enhancing LLMs with CA Knowledge (Domain RAG &amp; Fine-Tuning)</h3>
+                    <p class="prod-one-liner"><em>Comparative study of advanced RAG methodologies (Simple RAG, Self-RAG, RAG-Fusion, HyDE) and fine-tuned LLaMA-2 7B for Indian Chartered Accountancy exam preparation.</em></p>
                     
                     <div class="prod-contribution-box">
-                        <strong>My Contribution:</strong> Implemented semantic chunking, vector database embeddings, and structured retrieval pipelines on Llama2 using chartered accountancy (CA Foundation) textbooks for specialized domain QA.
+                        <strong>My Contribution:</strong> Preprocessed extensive CA textbooks, fine-tuned LLaMA-2 7B with curated QA pairs, implemented data augmentation, and benchmarked Simple RAG, Self-RAG, RAG-Fusion, and HyDE evaluated via quantitative NLP metrics and benchmark LLM-as-a-judge.
                     </div>
 
                     <div class="prod-tech-tags">
                         <span class="tag">Python</span>
-                        <span class="tag">Llama2</span>
-                        <span class="tag">RAG</span>
+                        <span class="tag">LLaMA-2 7B</span>
+                        <span class="tag">Self-RAG</span>
+                        <span class="tag">RAG-Fusion</span>
+                        <span class="tag">HyDE</span>
                         <span class="tag">Vector DB</span>
-                        <span class="tag">Sentence-Transformers</span>
-                        <span class="tag">FastAPI</span>
+                        <span class="tag">PyTorch</span>
                     </div>
 
                     <div class="prod-card-footer">
