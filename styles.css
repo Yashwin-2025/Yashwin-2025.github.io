@@ -439,10 +439,10 @@ img {
 }
 
 .hero-container {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 4rem;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    align-items: flex-start;
 }
 
 .hero-content {

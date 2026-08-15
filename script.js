@@ -36,10 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const nameText = "Yashwin S";
     const rolesList = [
-        "AI Backend Engineer",
-        "Enterprise RAG Architect",
-        "AI Agent Developer",
-        "MCP Server Architect"
+        "AI & Backend Engineer",
+        "Software Engineer - AI",
+        "RAG & Backend Developer"
     ];
     
     let nameIdx = 0;
