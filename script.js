@@ -422,53 +422,53 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         "smart-miner-helmet": {
             title: "Smart Helmet for Underground Mining Safety",
-            label: "IoT & Edge ML · PES University Capstone",
-            oneLiner: "Microcontroller-based protective helmet integrating toxic gas sensors, IMU motion telemetry, and real-time cloud hazard alerts.",
-            overview: "Developed an IoT-enabled smart safety helmet designed to safeguard underground mine workers by continuously monitoring environmental air toxicity and detecting sudden physical falls or collisions in hazardous subterranean tunnels.",
-            problem: "Underground mining environments present life-threatening hazards including undetected toxic gas leaks (CO, methane), oxygen depletion, and physical disorientation, where conventional wired safety systems fail to provide real-time location and physiological alerts.",
+            label: "IoT & Full-Stack Web · PES University Capstone",
+            oneLiner: "Microcontroller-based protective helmet integrating toxic gas sensors, IMU motion telemetry, and full-stack web alerting dashboard.",
+            overview: "Engineered an IoT-enabled safety monitoring system for subterranean mine workers, integrating hardware firmware logic with full-stack web dashboards to track ambient air toxicity and detect worker falls in hazardous mining shafts in real time.",
+            problem: "Underground mining environments present severe occupational hazards including undetected toxic gas leaks (CO, methane), sudden oxygen depletion, and physical disorientation where standard wired telemetry fails.",
             architecture: `
                 <div class="modal-arch-container">
-                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> IoT Telemetry & Alerting Architecture</div>
+                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> IoT Telemetry &amp; Full-Stack Alerting Flow</div>
                     <div class="m-arch-flow">
-                        <div class="m-node"><i class="fa-solid fa-head-side-mask"></i><span>1. Gas & IMU Sensors</span></div>
+                        <div class="m-node"><i class="fa-solid fa-head-side-mask"></i><span>1. Gas &amp; IMU Sensors</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-microchip"></i><span>2. ESP32 Edge Logic</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-microchip"></i><span>2. ESP32 Firmware</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                         <div class="m-node"><i class="fa-solid fa-cloud-arrow-up"></i><span>3. Firebase / ThingSpeak</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-triangle-exclamation"></i><span>4. Live Alert Dashboard</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-desktop"></i><span>4. Full-Stack Web Dashboard</span></div>
                     </div>
                 </div>
             `,
-            myContribution: "Co-designed the hardware circuit and firmware logic on the ESP32 microcontroller; integrated gas sensors (MQ series) and 6-axis IMU accelerometer sensors; programmed fall detection thresholds and established real-time WiFi/cloud telemetry streaming to Firebase and ThingSpeak.",
-            challenges: "Calibrating gas sensor baseline thresholds under high-humidity environments and optimizing microcontroller battery power consumption for extended field shifts.",
-            outcome: "Delivered a working hardware prototype capable of streaming sub-second sensor telemetry and triggering instant auditory and supervisor dashboard alerts during threshold violations.",
-            techStack: ["C++", "ESP32", "Firebase", "ThingSpeak", "Edge ML", "IoT Sensors", "Microcontroller"]
+            myContribution: "Programmed the hardware firmware on the ESP32 microcontroller; integrated analog multi-gas sensors (MQ series) and 6-axis IMU accelerometer sensors; coded fall-detection thresholds and built the full-stack web monitoring dashboard with real-time cloud dispatch to Firebase and ThingSpeak.",
+            challenges: "Calibrating gas sensor baseline thresholds under high-humidity mine shaft environments and ensuring low-latency sub-second dashboard updates during threshold violations.",
+            outcome: "Delivered a working end-to-end prototype with real-time cloud sensor telemetry and instant auditory and web supervisor alerts during environmental hazard detection.",
+            techStack: ["C++", "ESP32", "Full-Stack Web", "Firebase", "ThingSpeak", "IoT Sensors", "Microcontroller"]
         },
         "datacenter-digital-twin": {
-            title: "Data Center Digital Twin (Thermal & Heat Flow)",
-            label: "Digital Twin & Simulation · PES University",
-            oneLiner: "Interactive 3D simulation room in Unity 3D visualizing server rack airflow dynamics and spatial thermal dissipation.",
-            overview: "Created a real-time 3D digital twin of an enterprise data center facility, simulating thermal dissipation, server rack hotspot formation, and airflow cooling dynamics to optimize energy efficiency and cooling layout design.",
-            problem: "Data center server rooms expend massive energy on cooling infrastructure. Predicting hotspot emergence and airflow recirculation requires costly computational fluid dynamics (CFD) setups that lack interactive real-time visual feedback.",
+            title: "Data Center Digital Twin (Thermal & CFD Heat Flow)",
+            label: "CFD & Thermal Simulation · PES University",
+            oneLiner: "3D thermal simulation and computational fluid dynamics (CFD) modeling visualizing server rack airflow dynamics and spatial heat dissipation.",
+            overview: "Architected a digital twin simulation of an enterprise data center facility to analyze thermal dissipation, server rack hotspot emergence, and airflow circulation dynamics for cooling optimization.",
+            problem: "Data center server rooms expend massive energy on cooling infrastructure. Predicting hotspot emergence and airflow recirculation requires accurate computational fluid dynamics (CFD) simulation and spatial thermal gradient visualization.",
             architecture: `
                 <div class="modal-arch-container">
-                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> 3D Simulation & Data Flow</div>
+                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> CFD Thermal Simulation Pipeline</div>
                     <div class="m-arch-flow">
                         <div class="m-node"><i class="fa-solid fa-server"></i><span>1. Sensor Telemetry</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node"><i class="fa-solid fa-cubes"></i><span>2. Blender 3D Models</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-cubes"></i><span>2. Blender 3D Assets</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-brands fa-unity"></i><span>3. Unity Physics & C#</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-calculator"></i><span>3. CFD Simulation (Python/C++)</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-fire-flame-curved"></i><span>4. 3D Thermal Heatmap</span></div>
+                        <div class="m-node"><i class="fa-solid fa-fire-flame-curved"></i><span>4. Real-Time Spatial Heatmap</span></div>
                     </div>
                 </div>
             `,
-            myContribution: "Modeled 3D server rack assets and layout architecture in Blender; wrote C# scripting in Unity 3D to simulate thermal gradient interpolation across spatial coordinates; rendered real-time dynamic heatmaps and visual airflow streamlines.",
-            challenges: "Achieving smooth real-time 3D rendering of complex spatial heat gradients while maintaining 60 FPS performance on standard workstations.",
-            outcome: "Produced an interactive, navigable 3D digital twin environment that visualizes thermal hotspots and cooling airflow efficiency in real time.",
-            techStack: ["Unity 3D", "C#", "Blender", "3D Modeling", "Data Visualization", "Physics Simulation"]
+            myContribution: "Modeled 3D server rack assets and facility physical geometries in Blender; developed computational fluid dynamics (CFD) airflow simulation and spatial thermal gradient interpolation algorithms in Python and C++; rendered dynamic spatial heatmaps and airflow recirculation vectors.",
+            challenges: "Computing accurate continuous thermal gradients from discrete sensor points and optimizing simulation calculation times for responsive visual feedback.",
+            outcome: "Successfully visualized hotspot accumulation zones and cooling airflow recirculations across the facility layout.",
+            techStack: ["Blender", "CFD Simulation", "Python", "C++", "Thermal Modeling", "Data Visualization", "3D Modeling"]
         },
         "pescholar-analytics": {
             title: "PEScholar Research Publication Analytics",
