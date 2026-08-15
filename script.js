@@ -29,19 +29,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // TERMINAL TYPEWRITER EFFECT (ROLES)
+    // TERMINAL TYPEWRITER & ERASER EFFECT
     // ==========================================
+    const nameEl = document.getElementById('typewriter-name');
+    const nameCursor = document.querySelector('.type-cursor');
     const roleEl = document.getElementById('typewriter-role');
     
+    const nameText = "Yashwin S";
     const rolesList = [
         "AI & Backend Engineer",
         "Software Engineer - AI",
         "RAG & Backend Developer"
     ];
     
+    let nameIdx = 0;
     let roleIdx = 0;
     let rolesListIdx = 0;
     let isDeleting = false;
+    
+    function typeName() {
+        if (!nameEl) return;
+        if (nameIdx <= nameText.length) {
+            nameEl.textContent = nameText.substring(0, nameIdx);
+            nameIdx++;
+            setTimeout(typeName, 100);
+        } else {
+            if (nameCursor) nameCursor.style.display = 'none';
+            setTimeout(typeRoles, 300);
+        }
+    }
     
     function typeRoles() {
         if (!roleEl) return;
@@ -55,22 +71,24 @@ document.addEventListener('DOMContentLoaded', () => {
             roleIdx++;
         }
         
-        let typeSpeed = isDeleting ? 40 : 80;
+        let typeSpeed = isDeleting ? 35 : 75;
         
         if (!isDeleting && roleIdx === currentRole.length) {
-            typeSpeed = 2000; // Pause at the end of typing
+            typeSpeed = 2200; // Pause at the end before erasing
             isDeleting = true;
         } else if (isDeleting && roleIdx === 0) {
             isDeleting = false;
             rolesListIdx = (rolesListIdx + 1) % rolesList.length;
-            typeSpeed = 500; // pause before next role
+            typeSpeed = 450; // Pause before typing next role
         }
         
         setTimeout(typeRoles, typeSpeed);
     }
     
-    if (roleEl) {
-        setTimeout(typeRoles, 300);
+    if (nameEl) {
+        setTimeout(typeName, 350);
+    } else if (roleEl) {
+        setTimeout(typeRoles, 350);
     }
 
     // ==========================================
@@ -211,45 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // ==========================================
-    // CONTACT FORM SUBMISSION HANDLER
-    // ==========================================
-    const contactForm = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-    const submitBtn = document.getElementById('form-submit');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Disable submit button & show loading state
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = `Sending... <i class="fa-solid fa-spinner fa-spin"></i>`;
-            
-            const formData = new FormData(contactForm);
-            const formObj = Object.fromEntries(formData.entries());
-            
-            // Since this is a static webpage (github.io), we will mock the submission.
-            // In production, the user can hook this up to Formspree, Netlify Forms, Web3Forms, etc.
-            setTimeout(() => {
-                formStatus.className = 'form-status success';
-                formStatus.innerText = 'Thank you! Your message has been sent successfully (Mock mode).';
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Restore button
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = `Send Message <i class="fa-solid fa-paper-plane"></i>`;
-                
-                // Hide status message after 5 seconds
-                setTimeout(() => {
-                    formStatus.style.display = 'none';
-                }, 5000);
-            }, 1500);
-        });
-    }
 
     // ==========================================
     // REDESIGN LOGIC IMPLEMENTATIONS (vinothkanna features)
