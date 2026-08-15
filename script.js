@@ -584,4 +584,60 @@ document.addEventListener('DOMContentLoaded', () => {
             closeCaseStudyModal();
         }
     });
+
+    // ==========================================
+    // CONTACT FORM SUBMISSION
+    // ==========================================
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    const formSubmitBtn = document.getElementById('form-submit');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+
+            const name = nameInput ? nameInput.value.trim() : '';
+            const email = emailInput ? emailInput.value.trim() : '';
+            const message = messageInput ? messageInput.value.trim() : '';
+
+            if (!name || !email || !message) {
+                if (formStatus) {
+                    formStatus.className = 'form-status error';
+                    formStatus.textContent = 'Please fill out all fields.';
+                    formStatus.style.display = 'block';
+                }
+                return;
+            }
+
+            if (formSubmitBtn) {
+                formSubmitBtn.disabled = true;
+                formSubmitBtn.innerHTML = 'Opening Email Client... <i class="fa-solid fa-spinner fa-spin"></i>';
+            }
+
+            // Construct mailto link with pre-filled subject and body
+            const subject = encodeURIComponent(`Portfolio Message from ${name}`);
+            const body = encodeURIComponent(`Hello Yashwin,\n\n${message}\n\nBest regards,\n${name}\nEmail: ${email}`);
+            const mailtoUrl = `mailto:yashwinsblr@gmail.com?subject=${subject}&body=${body}`;
+
+            if (formStatus) {
+                formStatus.className = 'form-status success';
+                formStatus.innerHTML = '<i class="fa-solid fa-circle-check"></i> Launching your email client to send to <strong>yashwinsblr@gmail.com</strong>...';
+                formStatus.style.display = 'block';
+            }
+
+            // Trigger mailto link
+            window.location.href = mailtoUrl;
+
+            setTimeout(() => {
+                if (formSubmitBtn) {
+                    formSubmitBtn.disabled = false;
+                    formSubmitBtn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
+                }
+                contactForm.reset();
+            }, 2500);
+        });
+    }
 });
