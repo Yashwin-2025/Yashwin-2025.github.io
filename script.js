@@ -29,69 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // TERMINAL TYPEWRITER & ERASER EFFECT
-    // ==========================================
-    const nameEl = document.getElementById('typewriter-name');
-    const nameCursor = document.querySelector('.type-cursor');
-    const roleEl = document.getElementById('typewriter-role');
-
-    const nameText = "Yashwin S";
-    const rolesList = [
-        "AI & Backend Engineer",
-        "Software Engineer - AI",
-        "RAG & Backend Developer"
-    ];
-
-    let nameIdx = 0;
-    let roleIdx = 0;
-    let rolesListIdx = 0;
-    let isDeleting = false;
-
-    function typeName() {
-        if (!nameEl) return;
-        if (nameIdx <= nameText.length) {
-            nameEl.textContent = nameText.substring(0, nameIdx);
-            nameIdx++;
-            setTimeout(typeName, 100);
-        } else {
-            if (nameCursor) nameCursor.style.display = 'none';
-            setTimeout(typeRoles, 300);
-        }
-    }
-
-    function typeRoles() {
-        if (!roleEl) return;
-        const currentRole = rolesList[rolesListIdx];
-
-        if (isDeleting) {
-            roleEl.textContent = currentRole.substring(0, roleIdx - 1);
-            roleIdx--;
-        } else {
-            roleEl.textContent = currentRole.substring(0, roleIdx + 1);
-            roleIdx++;
-        }
-
-        let typeSpeed = isDeleting ? 35 : 75;
-
-        if (!isDeleting && roleIdx === currentRole.length) {
-            typeSpeed = 2200; // Pause at the end before erasing
-            isDeleting = true;
-        } else if (isDeleting && roleIdx === 0) {
-            isDeleting = false;
-            rolesListIdx = (rolesListIdx + 1) % rolesList.length;
-            typeSpeed = 450; // Pause before typing next role
-        }
-
-        setTimeout(typeRoles, typeSpeed);
-    }
-
-    if (nameEl) {
-        setTimeout(typeName, 350);
-    } else if (roleEl) {
-        setTimeout(typeRoles, 350);
-    }
-
-    // ==========================================
     // MOBILE NAVIGATION TOGGLE
     // ==========================================
     const mobileNavToggle = document.getElementById('mobile-nav-toggle');
@@ -174,8 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // SKILLS FILTERING
-    // ==========================================
     const filterButtons = document.querySelectorAll('.filter-btn');
     const skillCards = document.querySelectorAll('.skill-card');
 
@@ -223,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
             details.classList.toggle('open');
 
             if (details.classList.contains('open')) {
-                button.innerHTML = `Hide Details <i class="fa-solid fa-chevron-up"></i>`;
+                button.innerHTML = `Hide Details <i class="fa-solid fa-chevron-down"></i>`;
             } else {
                 button.innerHTML = `View Details <i class="fa-solid fa-chevron-down"></i>`;
             }
@@ -262,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(updateCursor);
     }
 
-    if (window.innerWidth > 991 && customCursor) {
+    if (window.innerWidth > 991 && customCursor && !window.matchMedia('(prefers-reduced-motion: reduce)').matches && window.matchMedia('(hover: hover)').matches) {
         requestAnimationFrame(updateCursor);
 
         // Add hover effects for interactive elements
@@ -280,11 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         attachCursorHoverListeners();
-        // Re-attach if elements are filtered or dynamically shown
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        filterBtns.forEach(btn => btn.addEventListener('click', () => {
-            setTimeout(attachCursorHoverListeners, 300);
-        }));
     }
 
 
@@ -332,10 +262,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const caseStudiesData = {
         "pothole-detection": {
+            tldr: "Built a road-image dataset and a model that spots potholes and estimates their depth from ordinary camera video. Published by Springer.",
             title: "Pothole Detection & Monocular Depth Estimation",
             label: "Peer-Reviewed Paper · Springer ACN'23",
             oneLiner: "Automated road hazard detection and monocular depth estimation pipeline evaluated on challenging Indian road conditions.",
-            overview: "Engineered an automated road hazard detection and depth profiling system to enhance road safety and vehicle telemetry. The research combined state-of-the-art computer vision models (YOLOv5 and EfficientDet) with monocular depth estimation algorithms (MiDaS) to detect road surface irregularities and estimate relative severity in real time.",
+            overview: "Engineered an automated road hazard detection and depth profiling system to enhance road safety and vehicle telemetry. The research combined computer vision models (YOLO and EfficientDet) with monocular depth estimation algorithms (MiDaS) to detect road surface irregularities and estimate relative severity in real time.",
             problem: "Automated road condition monitoring on Indian roadways suffers from severe visual noise, including extreme lighting variations, harsh tree shadows, complex pavement textures, and unstandardized road geometries, making standard depth sensors expensive and fragile.",
             architecture: `
                 <div class="modal-arch-container">
@@ -343,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="m-arch-flow">
                         <div class="m-node"><i class="fa-solid fa-video"></i><span>1. Video Stream</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-object-ungroup"></i><span>2. YOLOv5 / EfficientDet</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-object-ungroup"></i><span>2. YOLO / EfficientDet</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                         <div class="m-node highlight"><i class="fa-solid fa-layer-group"></i><span>3. MiDaS Depth</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
@@ -351,12 +282,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
             `,
-            myContribution: "Curated and annotated a comprehensive dataset of 11,800 images and 364 video sequences across 6 classes of Indian road conditions (52,568 instances). Trained and tuned YOLOv5 and EfficientDet object detection architectures, integrated MiDaS monocular depth estimation, and co-authored the research paper published in Springer ACN'23.",
+            myContribution: "Curated and annotated a comprehensive dataset of 11,800 images and 364 video sequences across 6 classes of Indian road conditions (52,568 instances). Fine-tuned YOLO and combined it with EfficientDet for detection, integrated MiDaS monocular depth estimation, and co-authored the research paper published in Springer ACN'23.",
             challenges: "Mitigating false positives caused by sharp asphalt shadows, balancing inference throughput for real-time video frames, and calculating relative hazard depth without active LiDAR sensors.",
-            outcome: "Achieved 80% detection accuracy on unseen test road footage and successfully published the findings in the Springer Advances in Computer Networks (ACN'23) proceedings.",
-            techStack: ["Python", "YOLO v5", "EfficientDet", "MiDaS Depth", "PyTorch", "OpenCV", "Roboflow"]
+            outcome: "Reached 85.6% mAP@50 (84.9% precision, 81.0% recall, 82.9% F1) on external evaluation data and published the findings in the Springer Advances in Computer Networks (ACN'23) proceedings.",
+            techStack: ["Python", "YOLO", "EfficientDet", "MiDaS Depth", "PyTorch", "OpenCV", "Roboflow"]
         },
         "llm-ca-rag": {
+            tldr: "Compared ways to make an open-source AI model answer Chartered Accountancy exam questions accurately: fine-tuning it on textbook material, and several methods for looking up the right passage first. Published by IEEE.",
             title: "Enhancing LLMs with CA Knowledge (Domain RAG & Fine-Tuning)",
             label: "Peer-Reviewed Paper · IEEE ICASET 2025",
             oneLiner: "Comparative study of advanced RAG methodologies (Simple RAG, Self-RAG, RAG-Fusion, HyDE) and fine-tuned LLaMA-2 7B for Indian Chartered Accountancy exam preparation.",
@@ -384,6 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
             techStack: ["Python", "LLaMA-2 7B", "Self-RAG", "RAG-Fusion", "HyDE", "PyTorch", "Sentence-Transformers", "FastAPI", "HuggingFace"]
         },
         "smart-miner-helmet": {
+            tldr: "A helmet for underground miners that detects dangerous gas and falls, and alerts supervisors on a live web dashboard. I built the hardware, firmware and dashboard.",
             title: "Smart Helmet for Underground Mining Safety",
             label: "IoT & Full-Stack Web · PES University Capstone",
             oneLiner: "Microcontroller-based protective helmet integrating toxic gas sensors, IMU motion telemetry, and full-stack web alerting dashboard.",
@@ -409,6 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
             techStack: ["C++", "ESP32", "Full-Stack Web", "Firebase", "ThingSpeak", "IoT Sensors", "Microcontroller"]
         },
         "datacenter-digital-twin": {
+            tldr: "A 3D model of a data center that shows where it overheats and how air flows, so cooling can be planned before problems happen.",
             title: "Data Center Digital Twin (Thermal & CFD Heat Flow)",
             label: "Blender & CFD Simulation · PES University",
             oneLiner: "3D thermal simulation and computational fluid dynamics (CFD) modeling in Blender visualizing server rack airflow dynamics and spatial heat dissipation.",
@@ -431,9 +365,10 @@ document.addEventListener('DOMContentLoaded', () => {
             myContribution: "Modeled high-fidelity 3D server rack assets and data center room geometries in Blender; set up and executed computational fluid dynamics (CFD) thermal dissipation simulations; rendered heat flow distributions and visual airflow streamlines across cold and hot server aisles.",
             challenges: "Modeling complex multi-aisle geometric obstructions and simulating accurate boundary airflow conditions for thermal dissipation in Blender.",
             outcome: "Successfully mapped hotspot accumulation areas and cooling airflow recirculation patterns across the data center layout.",
-            techStack: ["Blender", "CFD Simulation", "Thermal Modeling", "3D Design", "Heat Flow Analysis", "Data Visualization"]
+            techStack: ["Blender", "Unity", "CFD Simulation", "Thermal Modeling", "3D Design", "Heat Flow Analysis", "Data Visualization"]
         },
         "pescholar-analytics": {
+            tldr: "A tool that collects a university's research publications and citations automatically and shows them on one dashboard, replacing manual tracking.",
             title: "PEScholar Research Publication Analytics",
             label: "Data Engineering & Analytics · PES University",
             oneLiner: "Automated scholar citation tracking, anti-bot web scraping engine, and interactive research analytics dashboard.",
@@ -473,8 +408,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="modal-one-liner"><em>${data.oneLiner}</em></p>
             </div>
 
+            <div class="modal-section modal-tldr">
+                <h3><i class="fa-solid fa-bolt"></i> In short</h3>
+                <p>${data.tldr}</p>
+            </div>
+
             <div class="modal-section">
-                <h3><i class="fa-solid fa-align-left"></i> Overview</h3>
+                <h3><i class="fa-solid fa-align-left"></i> Technical overview</h3>
                 <p>${data.overview}</p>
             </div>
 
