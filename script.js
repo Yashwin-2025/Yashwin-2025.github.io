@@ -29,6 +29,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
+    // LIVE DURATIONS (LinkedIn style, inclusive months)
+    // ==========================================
+    function formatDuration(start) {
+        const [y, m] = start.split('-').map(Number);
+        const now = new Date();
+        const months = (now.getFullYear() - y) * 12 + (now.getMonth() + 1 - m) + 1;
+        const yrs = Math.floor(months / 12);
+        const mos = months % 12;
+        const parts = [];
+        if (yrs) parts.push(`${yrs} yr${yrs > 1 ? 's' : ''}`);
+        if (mos) parts.push(`${mos} mo${mos > 1 ? 's' : ''}`);
+        return parts.join(' ');
+    }
+
+    document.querySelectorAll('[data-start]').forEach(el => {
+        el.textContent = formatDuration(el.dataset.start);
+    });
+
+    // ==========================================
     // MOBILE NAVIGATION TOGGLE
     // ==========================================
     const mobileNavToggle = document.getElementById('mobile-nav-toggle');
@@ -368,30 +387,32 @@ document.addEventListener('DOMContentLoaded', () => {
             techStack: ["Blender", "Unity", "CFD Simulation", "Thermal Modeling", "3D Design", "Heat Flow Analysis", "Data Visualization"]
         },
         "pescholar-analytics": {
-            tldr: "A tool that collects a university's research publications and citations automatically and shows them on one dashboard, replacing manual tracking.",
-            title: "PEScholar Research Publication Analytics",
-            label: "Data Engineering & Analytics · PES University",
-            oneLiner: "Automated scholar citation tracking, anti-bot web scraping engine, and interactive research analytics dashboard.",
-            overview: "Architected an end-to-end academic research intelligence platform that automatically scrapes, indexes, deduplicates, and visualizes publication records and citation metrics across university faculty departments.",
-            problem: "Aggregating institutional publication indices from diverse academic databases (Google Scholar, Scopus) is manual and prone to severe IP rate-limiting, CAPTCHA blocks, and author name ambiguity.",
+            tldr: "A database app for the CSE department that gathers each professor's Google Scholar profile, publications and citation metrics, and lets anyone look them up in one place.",
+            title: "PEScholar: Research Paper Management System",
+            label: "Database project · PES University (5th semester)",
+            oneLiner: "Google Scholar data for 12 CSE professors, stored in MySQL and browsable through a Streamlit app.",
+            overview: "Built a research-paper management system for professors in the CSE department at PES University. It fetches each professor's Google Scholar profile and publications, cleans the data, loads it into a relational MySQL database, and serves it through a simple Streamlit interface where you pick a professor and a category (About, Citations or Publications).",
+            problem: "Faculty publication records live on individual Google Scholar pages, so there was no single place to see who published what, or to compare citation metrics such as h-index and i10-index across the department.",
             architecture: `
                 <div class="modal-arch-container">
-                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> Automated Extraction & Analytics Pipeline</div>
+                    <div class="m-arch-title"><i class="fa-solid fa-sitemap"></i> Data Pipeline</div>
                     <div class="m-arch-flow">
-                        <div class="m-node"><i class="fa-solid fa-globe"></i><span>1. Academic Repos</span></div>
+                        <div class="m-node"><i class="fa-solid fa-graduation-cap"></i><span>1. Google Scholar</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-robot"></i><span>2. Selenium + Proxy</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-broom"></i><span>2. Python Cleaning (JSON)</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node"><i class="fa-solid fa-database"></i><span>3. MySQL DB</span></div>
+                        <div class="m-node"><i class="fa-solid fa-file-excel"></i><span>3. Excel Export</span></div>
                         <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="m-node highlight"><i class="fa-solid fa-chart-line"></i><span>4. Streamlit UI</span></div>
+                        <div class="m-node highlight"><i class="fa-solid fa-database"></i><span>4. MySQL (3 tables)</span></div>
+                        <div class="m-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="m-node"><i class="fa-solid fa-table"></i><span>5. Streamlit App</span></div>
                     </div>
                 </div>
             `,
-            myContribution: "Developed automated web scrapers in Python with Selenium, incorporating proxy rotation and browser fingerprint evasion; designed relational MySQL database schemas for author and citation normalization; built interactive data analytics dashboards in Streamlit.",
-            challenges: "Bypassing anti-bot protection mechanisms reliably without IP bans and deduplicating cross-listed conference and journal papers.",
-            outcome: "Automated the institutional publication tracking workflow, reducing data compilation time from weeks to minutes with interactive citation visualization dashboards.",
-            techStack: ["Python", "Selenium", "MySQL", "Streamlit", "Pandas", "Plotly", "Web Scraping"]
+            myContribution: "Fetched author profiles and publications with the scholarly library and removed unneeded fields from the nested JSON; automated the JSON-to-Excel conversion step with Selenium; designed the ER diagram, relational schema and three related MySQL tables (professors, citations with yearly citation counts, publications) linked by Scholar ID; and built the Streamlit app that queries the database by professor and category.",
+            challenges: "Google Scholar data is deeply nested and inconsistent across profiles, so it had to be flattened into three related tables, and re-running the load could create duplicates (handled with primary keys and INSERT IGNORE).",
+            outcome: "A working app covering 12 CSE professors that shows each one's profile, citation metrics (citations, h-index, i10-index, yearly citations) and full publication list.",
+            techStack: ["Python", "scholarly (Google Scholar)", "Pandas", "MySQL", "Streamlit", "Selenium"]
         }
     };
 

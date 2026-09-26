@@ -92,10 +92,8 @@
                 <p class="hero-subtitle animate-slide-up-delayed">
                     At a cybersecurity company, I have shipped AI tools that help support teams resolve customer issues faster, and the billing and account systems the product runs on. Before that, I did research that led to two published papers.
                 </p>
-                <div class="hero-proof-chips animate-fade-in-delayed">
-                    <span class="proof-chip"><i class="fa-solid fa-circle-check"></i> AI in production at a security company</span>
-                    <span class="proof-chip"><i class="fa-solid fa-book-bookmark"></i> 2 published papers (Springer, IEEE)</span>
-                    <span class="proof-chip"><i class="fa-solid fa-graduation-cap"></i> 9.08 CGPA &middot; 6 scholarships</span>
+                <div class="hero-tech animate-fade-in-delayed">
+                    <span>RAG</span><span>AI agents</span><span>LLM evaluation</span><span>Python</span><span>TypeScript</span><span>Django</span><span>FastAPI</span><span>PostgreSQL</span><span>GCP</span>
                 </div>
                 <div class="hero-cta animate-slide-up-delayed">
                     <a href="resume.pdf" target="_blank" rel="noopener" class="sticky-button cta btn-primary-custom w-inline-block">
@@ -112,6 +110,26 @@
                     <a href="https://github.com/Yashwin-2025" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> github.com/Yashwin-2025</a>
                 </p>
             </div>
+
+            <aside class="hero-panel glass animate-fade-in" aria-label="At a glance">
+                <p class="panel-label">At a glance</p>
+                <div class="stat-grid">
+                    <div class="stat"><strong class="js-total-exp" data-start="2025-01">1 yr 9 mos</strong><span>at ConnectSecure, shipping AI</span></div>
+                    <div class="stat"><strong>2</strong><span>published papers (Springer, IEEE)</span></div>
+                    <div class="stat"><strong>9.08</strong><span>CGPA, B.Tech CS</span></div>
+                    <div class="stat"><strong>6</strong><span>academic scholarships</span></div>
+                </div>
+                <p class="panel-label">How my support agent works</p>
+                <div class="mini-flow">
+                    <span><i class="fa-solid fa-ticket"></i> Ticket</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span><i class="fa-solid fa-magnifying-glass"></i> Evidence</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span><i class="fa-solid fa-brain"></i> AI</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span><i class="fa-solid fa-wrench"></i> Fix</span>
+                </div>
+            </aside>
         </div>
     </section>
 
@@ -125,28 +143,48 @@
             </div>
             <div class="featured-grid">
                 <a href="#experience" class="featured-card glass">
+                    <div class="fc-top">
+                        <span class="icon-badge"><i class="fa-solid fa-headset"></i></span>
+                        <span class="kind-label">AI</span>
+                    </div>
                     <h3>AI Support Agent</h3>
                     <p>Reads a customer&rsquo;s support ticket, gathers the evidence from logs and screenshots, and drafts a fix for the support team.</p>
-                    <p class="featured-outcome"><i class="fa-solid fa-check"></i> Triage went from hours of manual work to minutes.</p>
-                    <p class="built-with"><span>Built with:</span> Python, PostgreSQL, Grafana, LLMs</p>
+                    <span class="outcome-chip"><i class="fa-solid fa-arrow-trend-up"></i> Triage: hours &rarr; minutes</span>
+                    <p class="under-hood"><span>Under the hood:</span> hybrid vector and keyword search in PostgreSQL, Grafana log queries through an MCP server, OCR on screenshots, semantic caching and LLM-as-judge evaluation.</p>
+                    <div class="chip-row"><span class="tag">Python</span><span class="tag">pgvector</span><span class="tag">MCP</span><span class="tag">Redis</span><span class="tag">Langfuse</span></div>
                 </a>
                 <a href="#experience" class="featured-card glass">
+                    <div class="fc-top">
+                        <span class="icon-badge"><i class="fa-solid fa-comments"></i></span>
+                        <span class="kind-label">AI</span>
+                    </div>
                     <h3>AI Knowledge Assistant</h3>
                     <p>Answers people&rsquo;s questions from an organisation&rsquo;s documents and live data, built for a government client.</p>
-                    <p class="featured-outcome"><i class="fa-solid fa-check"></i> Much more accurate answers, at a much lower AI running cost.</p>
-                    <p class="built-with"><span>Built with:</span> Python, FastAPI, Google Cloud, Llama 3</p>
+                    <span class="outcome-chip"><i class="fa-solid fa-arrow-trend-up"></i> More accurate, lower AI cost</span>
+                    <p class="under-hood"><span>Under the hood:</span> hybrid retrieval with reciprocal rank fusion, ingestion of text, tables and images, and a quantized Llama 3 served with vLLM on Google Cloud.</p>
+                    <div class="chip-row"><span class="tag">FastAPI</span><span class="tag">pgvector</span><span class="tag">vLLM</span><span class="tag">Vertex AI</span></div>
                 </a>
                 <a href="#experience" class="featured-card glass">
+                    <div class="fc-top">
+                        <span class="icon-badge"><i class="fa-solid fa-list-check"></i></span>
+                        <span class="kind-label">AI</span>
+                    </div>
                     <h3>Log Analyzer</h3>
                     <p>Turns five kinds of machine logs into one timeline and points to the likely cause of a problem.</p>
-                    <p class="featured-outcome"><i class="fa-solid fa-check"></i> Adopted by both the support and engineering teams.</p>
-                    <p class="built-with"><span>Built with:</span> Python, rule-based detection, LLMs</p>
+                    <span class="outcome-chip"><i class="fa-solid fa-arrow-trend-up"></i> Adopted by 2 teams</span>
+                    <p class="under-hood"><span>Under the hood:</span> rule-based severity detection, cross-log event correlation, timeline reconstruction and an LLM assistant for root-cause analysis.</p>
+                    <div class="chip-row"><span class="tag">TypeScript</span><span class="tag">Rule engine</span><span class="tag">LLMs</span></div>
                 </a>
                 <a href="#experience" class="featured-card glass">
+                    <div class="fc-top">
+                        <span class="icon-badge"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                        <span class="kind-label">Backend</span>
+                    </div>
                     <h3>Billing &amp; Account Portal</h3>
                     <p>The system partners and sales agents use to manage customer accounts and billing.</p>
-                    <p class="featured-outcome"><i class="fa-solid fa-check"></i> Accurate billing with no duplicate records, faster dashboards, and no engineering help needed for routine account changes.</p>
-                    <p class="built-with"><span>Built with:</span> Django, PostgreSQL, Supabase</p>
+                    <span class="outcome-chip"><i class="fa-solid fa-arrow-trend-up"></i> No duplicate records, faster dashboards</span>
+                    <p class="under-hood"><span>Under the hood:</span> transactional sync with automatic rollback, materialized views and partial indexes, JWT-scoped multi-tenant queries and HMAC-verified webhooks.</p>
+                    <div class="chip-row"><span class="tag">Django REST</span><span class="tag">PostgreSQL</span><span class="tag">Supabase</span></div>
                 </a>
             </div>
         </div>
@@ -165,23 +203,35 @@
                     <p>I&rsquo;m a software engineer at <strong>ConnectSecure</strong>, a cybersecurity company, where I build AI features that people use every day and the backend systems behind them.</p>
                     <p>I like taking a slow, manual process and turning it into something that just works, and then checking that it really does: every AI system I ship comes with a way to measure its answers.</p>
                     <p>Before industry, I did research in computer vision and language models at PES University, which led to papers published by Springer and IEEE.</p>
+                    <div class="highlights">
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-brain highlight-icon"></i>
+                            <div>
+                                <h4>AI that people use</h4>
+                                <p>Retrieval-based assistants (RAG) and agents, measured with automated evaluation.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-server highlight-icon"></i>
+                            <div>
+                                <h4>The backend it runs on</h4>
+                                <p>Billing, accounts and data systems in Python, Django and PostgreSQL.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="quick-facts glass">
                     <h3>Quick Facts</h3>
                     <ul class="facts-list">
                         <li><strong><i class="fa-solid fa-briefcase"></i> Current Role:</strong> Software Engineer - AI at ConnectSecure</li>
+                        <li><strong><i class="fa-solid fa-clock"></i> Experience:</strong> <span class="js-total-exp" data-start="2025-01">1 yr 9 mos</span> at ConnectSecure (incl. internship)</li>
                         <li><strong><i class="fa-solid fa-graduation-cap"></i> Education:</strong> B.Tech in CS, PES University (9.08 CGPA)</li>
                         <li><strong><i class="fa-solid fa-location-dot"></i> Location:</strong> Bangalore, India</li>
                         <li><strong><i class="fa-solid fa-book-bookmark"></i> Publications:</strong> Springer ACN'23 &amp; IEEE ICASET 2025</li>
                         <li><strong><i class="fa-solid fa-award"></i> Scholarships:</strong> 3x Prof. MRD, 1x CNR Rao, 2x DAC</li>
                     </ul>
-                    <div style="margin-top: 1.8rem; display: flex; justify-content: center;">
-                        <a href="resume.pdf" target="_blank" rel="noopener" class="sticky-button cta btn-secondary-custom w-inline-block" style="width: 100%;">
-                            <div class="sticky-text-block" style="justify-content: center; width: 100%;"><i class="fa-solid fa-file-pdf"></i> View Resume</div>
-                            <div class="sticky-hover-color"></div>
-                        </a>
-                    </div>
+                    <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn-secondary btn-block facts-cta"><i class="fa-solid fa-file-pdf"></i> View Resume</a>
                 </div>
             </div>
         </div>
@@ -195,84 +245,108 @@
                 <h2 class="section-title">Where I&rsquo;ve worked</h2>
                 <div class="section-divider"></div>
             </div>
-            <div class="experience-list">
-                <div class="exp-card glass">
-                    <div class="exp-header">
-                        <div class="exp-title-group">
-                            <h3 class="exp-role">Software Engineer - AI</h3>
-                            <span class="company"><i class="fa-solid fa-building"></i> ConnectSecure</span>
+            <div class="xp-timeline">
+                <div class="xp-item current">
+                    <span class="xp-dot"></span>
+                    <div class="xp-card glass">
+                        <div class="xp-head">
+                            <div>
+                                <h3 class="exp-role">Software Engineer - AI</h3>
+                                <span class="company"><i class="fa-solid fa-building"></i> ConnectSecure</span>
+                            </div>
+                            <div class="xp-when">
+                                <span class="exp-date-badge"><i class="fa-solid fa-calendar-days"></i> Jul 2025 – Present</span>
+                                <span class="dur-badge" data-start="2025-07">1 yr 3 mos</span>
+                            </div>
                         </div>
-                        <div class="exp-date-badge"><i class="fa-solid fa-calendar-days"></i> Jul 2025 – Present</div>
-                    </div>
-
-                    <p class="timeline-brief">I build AI assistants for a cybersecurity product, and the billing and account systems it runs on.</p>
-
-                    <button class="expand-timeline-btn active">Hide Details <i class="fa-solid fa-chevron-down"></i></button>
-
-                    <div class="timeline-details open">
-                        <h4 class="exp-group-title">AI systems</h4>
-                        <ul class="details-list">
+                        <p class="timeline-brief">I build AI assistants for a cybersecurity product, and the billing and account systems it runs on.</p>
+                        <div class="xp-groups">
+                            <div class="xp-group">
+                                <h4 class="exp-group-title"><i class="fa-solid fa-brain"></i> AI systems</h4>
+                                <ul class="xp-list">
                             <li>
-                                <strong>AI Support Agent:</strong> Built an AI assistant that reads support tickets, pulls the relevant logs and screenshots, and drafts a fix, cutting triage from hours to minutes. I also built an automated review that scores its answers against how human technicians solved the same tickets.
-                                <p class="built-with"><span>Built with:</span> Python, PostgreSQL vector search, Grafana, Redis, Langfuse</p>
+                                <h5>AI Support Agent</h5>
+                                <p>Reads support tickets, pulls the relevant logs and screenshots, and drafts a fix, cutting triage from hours to minutes. An automated review scores its answers against how human technicians solved the same tickets.</p>
+                                <div class="chip-row"><span class="tag">Python</span><span class="tag">pgvector hybrid search</span><span class="tag">MCP</span><span class="tag">Tesseract OCR</span><span class="tag">Redis</span><span class="tag">Langfuse</span></div>
                             </li>
                             <li>
-                                <strong>AI Knowledge Assistant (government client):</strong> Led the design and launch of a cloud AI assistant that answers questions from documents, tables and images. It raised answer accuracy substantially while cutting AI running cost.
-                                <p class="built-with"><span>Built with:</span> Python, FastAPI, Google Cloud, Llama 3, vLLM</p>
+                                <h5>AI Knowledge Assistant (government client)</h5>
+                                <p>Led the design and launch of a cloud AI assistant that answers questions from documents, tables and images, raising answer accuracy substantially while cutting AI running cost.</p>
+                                <div class="chip-row"><span class="tag">FastAPI</span><span class="tag">RRF reranking</span><span class="tag">vLLM</span><span class="tag">Llama 3</span><span class="tag">Vertex AI</span><span class="tag">GCP</span></div>
                             </li>
                             <li>
-                                <strong>Log Analyzer:</strong> Built a tool that combines five kinds of logs into one timeline, flags problems by severity and suggests a likely cause. Both the support and engineering teams now use it.
-                                <p class="built-with"><span>Built with:</span> Python, rule-based detection, LLMs</p>
+                                <h5>Log Analyzer</h5>
+                                <p>Combines five kinds of logs into one timeline, flags problems by severity and suggests a likely cause. Both the support and engineering teams use it.</p>
+                                <div class="chip-row"><span class="tag">TypeScript</span><span class="tag">Rule-based detection</span><span class="tag">Log correlation</span><span class="tag">LLMs</span></div>
                             </li>
                             <li>
-                                <strong>Deployment Assistant:</strong> Built an internal tool that deploys small services from a plain-English request.
-                                <p class="built-with"><span>Built with:</span> Claude Code, Docker, GitHub Actions</p>
+                                <h5>Deployment Assistant</h5>
+                                <p>An internal tool that deploys small services from a plain-English request.</p>
+                                <div class="chip-row"><span class="tag">Claude Code</span><span class="tag">Anthropic API</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span></div>
                             </li>
-                        </ul>
-                        <h4 class="exp-group-title">Backend &amp; reliability</h4>
-                        <ul class="details-list">
+                                </ul>
+                            </div>
+                            <div class="xp-group">
+                                <h4 class="exp-group-title"><i class="fa-solid fa-server"></i> Backend &amp; reliability</h4>
+                                <ul class="xp-list">
                             <li>
-                                <strong>Billing &amp; Account Portal:</strong> Built the system that keeps partner billing and customer accounts in sync. If any step fails, it undoes itself, so there are no duplicate or half-finished records.
-                                <p class="built-with"><span>Built with:</span> Django, PostgreSQL, Supabase, Chargebee</p>
-                            </li>
-                            <li>
-                                <strong>Self-service account tools:</strong> Gave sales agents an API to extend trials, suspend and reactivate accounts themselves, with a full audit trail, so they no longer wait on engineering.
-                                <p class="built-with"><span>Built with:</span> Django REST Framework</p>
-                            </li>
-                            <li>
-                                <strong>Faster dashboards:</strong> Made dashboards noticeably faster by pre-computing usage figures inside the database.
-                                <p class="built-with"><span>Built with:</span> PostgreSQL</p>
+                                <h5>Billing &amp; Account Portal</h5>
+                                <p>Keeps partner billing and customer accounts in sync. If any step fails, it undoes itself, so there are no duplicate or half-finished records.</p>
+                                <div class="chip-row"><span class="tag">Django REST</span><span class="tag">PostgreSQL</span><span class="tag">Supabase</span><span class="tag">Chargebee</span></div>
                             </li>
                             <li>
-                                <strong>Security &amp; reliability:</strong> Made sure each partner sees only its own customers, every incoming billing message is verified as genuine, and billing sync retries by itself during network drops. Also set up a one-command local setup and automated tests for the team.
-                                <p class="built-with"><span>Built with:</span> JWT, HMAC signatures, Docker, GitHub Actions</p>
+                                <h5>Self-service account tools</h5>
+                                <p>An API that lets sales agents extend trials, suspend and reactivate accounts themselves, with a full audit trail.</p>
+                                <div class="chip-row"><span class="tag">Django REST Framework</span><span class="tag">Audit logging</span></div>
                             </li>
-                        </ul>
+                            <li>
+                                <h5>Faster dashboards</h5>
+                                <p>Made dashboards noticeably faster by pre-computing usage figures inside the database.</p>
+                                <div class="chip-row"><span class="tag">Materialized views</span><span class="tag">Partial indexes</span></div>
+                            </li>
+                            <li>
+                                <h5>Security &amp; reliability</h5>
+                                <p>Each partner sees only its own customers, every incoming billing message is verified as genuine, and sync retries by itself during network drops.</p>
+                                <div class="chip-row"><span class="tag">JWT scoping</span><span class="tag">HMAC-SHA256</span><span class="tag">Retry with backoff</span><span class="tag">GitHub Actions CI</span></div>
+                            </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="exp-card glass">
-                    <div class="exp-header">
-                        <div class="exp-title-group">
-                            <h3 class="exp-role">AI Intern</h3>
-                            <span class="company"><i class="fa-solid fa-building"></i> ConnectSecure</span>
+                <div class="xp-item">
+                    <span class="xp-dot"></span>
+                    <div class="xp-card glass">
+                        <div class="xp-head">
+                            <div>
+                                <h3 class="exp-role">AI Intern</h3>
+                                <span class="company"><i class="fa-solid fa-building"></i> ConnectSecure</span>
+                            </div>
+                            <div class="xp-when">
+                                <span class="exp-date-badge"><i class="fa-solid fa-calendar-days"></i> Jan 2025 – Jun 2025</span>
+                                <span class="dur-badge">6 mos</span>
+                            </div>
                         </div>
-                        <div class="exp-date-badge"><i class="fa-solid fa-calendar-days"></i> Jan 2025 – Jun 2025</div>
+                        <p class="timeline-brief">Built a system that finds answers inside medical research papers for a healthcare client, with a web app for clinicians.</p>
+                        <div class="chip-row"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Hybrid search RAG</span><span class="tag">React</span></div>
                     </div>
-                    <p class="timeline-brief">Built a system that finds answers inside medical research papers for a healthcare client, with a web app for clinicians.</p>
-                    <p class="built-with"><span>Built with:</span> Python, FastAPI, React</p>
                 </div>
-
-                <div class="exp-card glass">
-                    <div class="exp-header">
-                        <div class="exp-title-group">
-                            <h3 class="exp-role">Research Intern</h3>
-                            <span class="company"><i class="fa-solid fa-university"></i> CDSAML-CCBD, PES University</span>
+                <div class="xp-item">
+                    <span class="xp-dot"></span>
+                    <div class="xp-card glass">
+                        <div class="xp-head">
+                            <div>
+                                <h3 class="exp-role">Research Intern</h3>
+                                <span class="company"><i class="fa-solid fa-university"></i> CDSAML-CCBD, PES University</span>
+                            </div>
+                            <div class="xp-when">
+                                <span class="exp-date-badge"><i class="fa-solid fa-calendar-days"></i> Jun 2023 – Sep 2023</span>
+                                <span class="dur-badge">4 mos</span>
+                            </div>
                         </div>
-                        <div class="exp-date-badge"><i class="fa-solid fa-calendar-days"></i> Jun 2023 – Sep 2023</div>
+                        <p class="timeline-brief">Built a dataset of 11,800 road images and 364 videos, and trained a model that spots potholes, reaching 85.6% mAP@50 (a standard detection-accuracy score). This work became a Springer paper.</p>
+                        <div class="chip-row"><span class="tag">Python</span><span class="tag">YOLO</span><span class="tag">MiDaS depth</span><span class="tag">PyTorch</span></div>
                     </div>
-                    <p class="timeline-brief">Built a dataset of 11,800 road images and 364 videos, and trained a model that spots potholes, reaching 85.6% mAP@50 (a standard detection-accuracy score). This work became a Springer paper.</p>
-                    <p class="built-with"><span>Built with:</span> Python, YOLO, MiDaS</p>
                 </div>
             </div>
         </div>
@@ -288,13 +362,19 @@
             </div>
             <div class="prod-work-list">
                 <div class="prod-work-item glass">
-                    <p class="prod-kicker">Springer paper &middot; ACN&rsquo;23</p>
+                    <div class="prod-work-top">
+                        <div class="prod-work-meta">
+                            <span class="icon-badge small"><i class="fa-solid fa-road"></i></span>
+                            <span class="prod-badge">Springer paper &middot; ACN&rsquo;23</span>
+                        </div>
+                        <span class="prod-metric-pill">85.6% mAP@50</span>
+                    </div>
                     <h3 class="prod-title">Spotting potholes from a phone camera</h3>
                     <p class="prod-one-liner">A system that finds potholes in road video and estimates how deep they are, tested on Indian roads.</p>
                     <div class="prod-contribution-box">
                         <strong>My part:</strong> Built the dataset (11,800 images, 364 videos), fine-tuned the detection model to 85.6% mAP@50, and added depth estimation.
                     </div>
-                    <div class="prod-tech-tags"><span class="tag">Python</span><span class="tag">YOLO</span><span class="tag">EfficientDet</span><span class="tag">MiDaS</span><span class="tag">PyTorch</span></div>
+                    <div class="chip-row"><span class="tag">Python</span><span class="tag">YOLO</span><span class="tag">EfficientDet</span><span class="tag">MiDaS</span><span class="tag">PyTorch</span></div>
                     <div class="prod-card-footer">
                         <a href="https://link.springer.com/chapter/10.1007/978-981-97-2004-0_34" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
                             <i class="fa-solid fa-file-lines"></i> Springer Paper
@@ -305,13 +385,19 @@
                     </div>
                 </div>
                 <div class="prod-work-item glass">
-                    <p class="prod-kicker">IEEE paper &middot; ICASET 2025</p>
+                    <div class="prod-work-top">
+                        <div class="prod-work-meta">
+                            <span class="icon-badge small"><i class="fa-solid fa-book-open"></i></span>
+                            <span class="prod-badge">IEEE paper &middot; ICASET 2025</span>
+                        </div>
+                        <span class="prod-metric-pill">LLaMA-2 7B</span>
+                    </div>
                     <h3 class="prod-title">Teaching an AI to answer CA exam questions</h3>
                     <p class="prod-one-liner">Compared ways to make an open-source language model give accurate answers for Chartered Accountancy students.</p>
                     <div class="prod-contribution-box">
                         <strong>My part:</strong> Prepared the textbook data, fine-tuned LLaMA-2 7B, and compared four retrieval methods (Simple RAG, Self-RAG, RAG-Fusion, HyDE) using automatic and LLM-as-judge scoring.
                     </div>
-                    <div class="prod-tech-tags"><span class="tag">Python</span><span class="tag">LLaMA-2 7B</span><span class="tag">RAG</span><span class="tag">Fine-tuning</span><span class="tag">PyTorch</span></div>
+                    <div class="chip-row"><span class="tag">Python</span><span class="tag">LLaMA-2 7B</span><span class="tag">RAG</span><span class="tag">Fine-tuning</span><span class="tag">PyTorch</span></div>
                     <div class="prod-card-footer">
                         <a href="https://ieeexplore.ieee.org/document/11232375" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
                             <i class="fa-solid fa-file-lines"></i> IEEE Paper
@@ -322,13 +408,19 @@
                     </div>
                 </div>
                 <div class="prod-work-item glass">
-                    <p class="prod-kicker">PES University</p>
+                    <div class="prod-work-top">
+                        <div class="prod-work-meta">
+                            <span class="icon-badge small"><i class="fa-solid fa-helmet-safety"></i></span>
+                            <span class="prod-badge">Hardware &middot; IoT</span>
+                        </div>
+                        
+                    </div>
                     <h3 class="prod-title">A smart helmet for miners</h3>
                     <p class="prod-one-liner">A helmet that detects dangerous gas and falls underground, and alerts supervisors in real time.</p>
                     <div class="prod-contribution-box">
                         <strong>My part:</strong> Built it end to end: the ESP32 firmware (C++), the gas and motion sensors, and the web dashboard, with cloud alerts via Firebase and ThingSpeak.
                     </div>
-                    <div class="prod-tech-tags"><span class="tag">C++</span><span class="tag">ESP32</span><span class="tag">Firebase</span><span class="tag">ThingSpeak</span><span class="tag">IoT</span></div>
+                    <div class="chip-row"><span class="tag">C++</span><span class="tag">ESP32</span><span class="tag">Firebase</span><span class="tag">ThingSpeak</span><span class="tag">IoT</span></div>
                     <div class="prod-card-footer">
                         <button class="btn btn-primary btn-sm view-case-study-btn" data-case-id="smart-miner-helmet">
                             Read more <i class="fa-solid fa-arrow-right"></i>
@@ -336,13 +428,19 @@
                     </div>
                 </div>
                 <div class="prod-work-item glass">
-                    <p class="prod-kicker">PES University</p>
+                    <div class="prod-work-top">
+                        <div class="prod-work-meta">
+                            <span class="icon-badge small"><i class="fa-solid fa-cube"></i></span>
+                            <span class="prod-badge">3D &middot; Simulation</span>
+                        </div>
+                        
+                    </div>
                     <h3 class="prod-title">A 3D model of a data center&rsquo;s heat</h3>
                     <p class="prod-one-liner">A digital twin that shows where a server room overheats and how air moves through it, to help plan cooling.</p>
                     <div class="prod-contribution-box">
                         <strong>My part:</strong> Modelled the data center in Blender, ran CFD heat simulations, and visualised the results in Unity.
                     </div>
-                    <div class="prod-tech-tags"><span class="tag">Blender</span><span class="tag">Unity</span><span class="tag">CFD</span><span class="tag">3D visualisation</span></div>
+                    <div class="chip-row"><span class="tag">Blender</span><span class="tag">Unity</span><span class="tag">CFD</span><span class="tag">3D visualisation</span></div>
                     <div class="prod-card-footer">
                         <button class="btn btn-primary btn-sm view-case-study-btn" data-case-id="datacenter-digital-twin">
                             Read more <i class="fa-solid fa-arrow-right"></i>
@@ -350,14 +448,23 @@
                     </div>
                 </div>
                 <div class="prod-work-item glass">
-                    <p class="prod-kicker">PES University</p>
-                    <h3 class="prod-title">Tracking a university&rsquo;s research output</h3>
-                    <p class="prod-one-liner">Collects faculty publications and citations automatically and shows them on one dashboard.</p>
-                    <div class="prod-contribution-box">
-                        <strong>My part:</strong> Built the web scrapers, the database and the dashboard.
+                    <div class="prod-work-top">
+                        <div class="prod-work-meta">
+                            <span class="icon-badge small"><i class="fa-solid fa-database"></i></span>
+                            <span class="prod-badge">Database project &middot; PES University</span>
+                        </div>
+                        <span class="prod-metric-pill">12 professors</span>
                     </div>
-                    <div class="prod-tech-tags"><span class="tag">Python</span><span class="tag">Selenium</span><span class="tag">MySQL</span><span class="tag">Streamlit</span></div>
+                    <h3 class="prod-title">Tracking a department&rsquo;s research output</h3>
+                    <p class="prod-one-liner">A research-paper management system for the CSE department: it pulls each professor&rsquo;s Google Scholar profile into a database and lets anyone look up their publications and citation stats.</p>
+                    <div class="prod-contribution-box">
+                        <strong>My part:</strong> Pulled and cleaned Google Scholar data for 12 professors, designed the ER diagram and a three-table MySQL schema (professors, citations, publications), and built the Streamlit app to browse it.
+                    </div>
+                    <div class="chip-row"><span class="tag">Python</span><span class="tag">Google Scholar (scholarly)</span><span class="tag">MySQL</span><span class="tag">Streamlit</span><span class="tag">Pandas</span><span class="tag">Selenium</span></div>
                     <div class="prod-card-footer">
+                        <a href="https://github.com/Yashwin-2025/PEScholar" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
                         <button class="btn btn-primary btn-sm view-case-study-btn" data-case-id="pescholar-analytics">
                             Read more <i class="fa-solid fa-arrow-right"></i>
                         </button>
@@ -375,11 +482,27 @@
                 <h2 class="section-title">What I work with</h2>
                 <div class="section-divider"></div>
             </div>
-            <div class="skills-rows glass">
-                <div class="skill-row"><h3>AI &amp; LLMs</h3><p>RAG, AI agents, LLM evaluation, LlamaIndex, Claude and Llama models, MCP</p></div>
-                <div class="skill-row"><h3>Backend</h3><p>Python, Django, FastAPI, REST APIs, PostgreSQL, Redis</p></div>
-                <div class="skill-row"><h3>Cloud &amp; tools</h3><p>Google Cloud (GCP), Docker, GitHub Actions CI/CD, Cloudflare</p></div>
-                <div class="skill-row"><h3>Research</h3><p>Computer vision (YOLO), model fine-tuning, published in Springer and IEEE</p></div>
+            <div class="skills-grid">
+                <div class="skill-card glass">
+                    <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>AI &amp; LLMs</h3>
+                    <div class="chip-row"><span class="tag">RAG</span><span class="tag">AI agents</span><span class="tag">LLM-as-judge evaluation</span><span class="tag">LlamaIndex</span><span class="tag">MCP</span><span class="tag">vLLM</span><span class="tag">Claude / Llama models</span><span class="tag">Langfuse</span></div>
+                </div>
+                <div class="skill-card glass">
+                    <div class="card-icon"><i class="fa-solid fa-server"></i></div>
+                    <h3>Backend &amp; data</h3>
+                    <div class="chip-row"><span class="tag">Python</span><span class="tag">Django REST</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">pgvector</span><span class="tag">Redis</span><span class="tag">Supabase</span></div>
+                </div>
+                <div class="skill-card glass">
+                    <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Frontend &amp; languages</h3>
+                    <div class="chip-row"><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">C++</span><span class="tag">Streamlit</span></div>
+                </div>
+                <div class="skill-card glass">
+                    <div class="card-icon"><i class="fa-solid fa-cloud"></i></div>
+                    <h3>Cloud &amp; DevOps</h3>
+                    <div class="chip-row"><span class="tag">GCP</span><span class="tag">Vertex AI</span><span class="tag">Docker</span><span class="tag">GitHub Actions CI/CD</span><span class="tag">Cloudflare Workers AI</span></div>
+                </div>
             </div>
         </div>
     </section>

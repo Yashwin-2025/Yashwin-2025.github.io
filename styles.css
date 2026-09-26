@@ -2966,3 +2966,379 @@ img {
 @media (max-width: 600px) {
     .hero-subtitle { font-size: 1.05rem; }
 }
+
+
+/* ==========================================
+   LAYOUT PASS: structure + tech, plain words
+   ========================================== */
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.icon-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--accent-glow);
+    color: var(--accent-primary);
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.icon-badge.small {
+    width: 34px;
+    height: 34px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+}
+
+/* Hero */
+.hero-container {
+    align-items: center;
+}
+
+.hero-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.9rem;
+    margin-bottom: 1.8rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.hero-tech span + span::before {
+    content: "\2022";
+    color: var(--accent-primary);
+    margin-right: 0.9rem;
+}
+
+.hero-panel {
+    flex: 0 0 360px;
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.panel-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+.stat {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0.9rem;
+}
+
+.stat strong {
+    display: block;
+    font-family: var(--font-title);
+    font-size: 1.45rem;
+    color: var(--accent-primary);
+    line-height: 1.2;
+}
+
+.stat span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.mini-flow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+}
+
+.mini-flow span {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.6rem 0.4rem;
+    min-width: 62px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-main);
+}
+
+.mini-flow span i {
+    color: var(--accent-primary);
+    font-size: 1rem;
+}
+
+.mini-flow > i {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+}
+
+/* Selected work */
+.fc-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.kind-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.7rem;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.outcome-chip {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+    color: #16a34a;
+    background: rgba(22, 163, 74, 0.12);
+    border: 1px solid rgba(22, 163, 74, 0.35);
+}
+
+.dark-theme .outcome-chip {
+    color: #4ade80;
+}
+
+.under-hood {
+    font-size: 0.92rem !important;
+    color: var(--text-secondary);
+}
+
+.under-hood span {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.featured-card .chip-row {
+    margin-top: auto;
+}
+
+/* About */
+.facts-cta {
+    margin-top: 1.6rem;
+}
+
+.about-text .highlights {
+    margin-top: 1.6rem;
+}
+
+/* Experience timeline */
+.xp-timeline {
+    position: relative;
+    margin-top: 2rem;
+    padding-left: 2rem;
+}
+
+.xp-timeline::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: var(--border-color);
+}
+
+.xp-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.xp-dot {
+    position: absolute;
+    left: calc(-2rem + 1px);
+    top: 1.8rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--bg-main);
+    border: 2px solid var(--accent-primary);
+}
+
+.xp-item.current .xp-dot {
+    background: var(--accent-primary);
+    box-shadow: 0 0 0 5px var(--accent-glow);
+}
+
+.xp-card {
+    padding: 1.6rem 1.8rem;
+}
+
+.xp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.9rem;
+}
+
+.xp-head .company {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.3rem;
+    color: var(--text-secondary);
+}
+
+.xp-when {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+}
+
+.dur-badge {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.xp-card > .chip-row {
+    margin-top: 0.8rem;
+}
+
+.xp-groups {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.xp-group {
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 1.2rem 1.3rem;
+    background: var(--bg-main);
+}
+
+.xp-group .exp-group-title {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.xp-list li {
+    padding: 0.85rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.xp-list li:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.xp-list h5 {
+    font-family: var(--font-title);
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.xp-list p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.6rem;
+    line-height: 1.55;
+}
+
+/* Projects */
+.prod-work-item .chip-row {
+    margin-top: 0.2rem;
+}
+
+.prod-metric-pill {
+    color: var(--accent-primary);
+    background: var(--accent-glow);
+    border-color: transparent;
+}
+
+/* Skills */
+.skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    opacity: 1;
+    transform: none;
+}
+
+/* Alternate section backgrounds */
+.featured-section,
+.experience-section,
+.skills-section {
+    background: linear-gradient(180deg, transparent, var(--accent-glow) 50%, transparent);
+}
+
+@media (max-width: 1100px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-container {
+        flex-direction: column;
+    }
+    .hero-panel {
+        flex: none;
+        width: 100%;
+    }
+    .xp-groups {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .xp-when {
+        align-items: flex-start;
+    }
+    .xp-timeline {
+        padding-left: 1.4rem;
+    }
+    .xp-dot {
+        left: calc(-1.4rem + 1px);
+    }
+    .xp-card {
+        padding: 1.3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-panel, .stat { text-align: left; }
+    .mini-flow { gap: 0.2rem; }
+    .mini-flow span { min-width: 0; flex: 1; padding: 0.5rem 0.2rem; font-size: 0.75rem; }
+    .mini-flow > i { font-size: 0.6rem; }
+}
